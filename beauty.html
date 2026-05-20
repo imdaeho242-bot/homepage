@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴브릿지 비지니스 플랫폼</title>
+    <style>
+        /* 세련되고 산뜻한 비즈니스 톤앤매너 설정 */
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #1e2d42; /* 신뢰감을 주는 다크 네이비 */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: -1px; }
+        header p { margin: 10px 0 0 0; opacity: 0.8; font-size: 1.1em; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        /* 3대 핵심 사업 항목 레이아웃 */
+        .main-services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        @media (max-width: 768px) {
+            .main-services { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 { color: #1e2d42; margin-top: 0; font-size: 1.5em; }
+        .card p { color: #666; line-height: 1.6; font-size: 0.95em; }
+        
+        /* 가족 사업 연동 링크 구역 */
+        .family-links {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .family-links h3 { color: #333; margin-top: 0; }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .btn-group { flex-direction: column; }
+        }
+        .link-btn {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .link-btn:hover {
+            background-color: #1e2d42;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            font-size: 0.85em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>비즈니스 종합 플랫폼</h1>
+        <p>미용재료 유통 · 기업/가정 렌탈 · 상품 중개 전문</p>
+    </header>
+
+    <div class="container">
+        <div class="main-services">
+            <div class="card">
+                <h2>✨ 휴브릿지 미용재료 유통</h2>
+                <p>전문 프리미엄 헤어.두피 시술제품, 케어제품 전문 공급,  마케팅 교육, 컨설팅 등</p>
+              <a href="https://smartstore.naver.com/" target="_blank">
+    <img src="121.png" alt="미용재료 이미지" width="100%">
+</a>
+            </div>
+            
+            <div class="card">
+                <h2>🛠️ 종합 렌탈 서비스</h2>
+                <p><b>[B2B]</b> 기계·의료 장비, 창업 설비, 비품, 공조 시설부터 운영자금 컨설팅까지!<br><b>[B2C]</b> 안심하고 사용하는 가정용 생활 가전 렌탈 일체.</p>
+            </div>
+            
+            <div class="card">
+                <h2>🤝 상품 중개 & 판매</h2>
+                <p>친환경 음식물 처리기를 비롯한 우수한 리빙/산업 상품의 중개 및 판매업을 통해 최상의 가치를 전달합니다.</p>
+            </div>
+        </div>
+
+        <div class="family-links">
+            <h3>패밀리 서비스 바로가기</h3>
+            <p>가족이 함께 운영하는 신뢰의 환경 및 복지 서비스입니다.</p>
+            <div class="btn-group">
+                <a href="#" class="link-btn" target="_blank">🌳 천리환경 바로가기</a>
+                <a href="#" class="link-btn" target="_blank">🧡 요양보호센터 바로가기</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 비즈니스 플랫폼. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
