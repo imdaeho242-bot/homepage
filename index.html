@@ -22,8 +22,8 @@
       min-height: 100vh;
       padding: 70px 30px;
       background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
-        linear-gradient(135deg, #1f2937, #374151, #111827);
+   linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),
+   linear-gradient(135deg, #2e5a44, #1c3d2e, #0b1a12);  
       background-size: cover;
       background-position: center;
     }
@@ -254,10 +254,23 @@ modal-overlay {
   cursor: pointer;
 }
 .submit-btn:hover { background-color: #e55b4e; }
-   
+   .live-chat-btn {
+    position: fixed;       /* 화면에 움직이지 않게 고정 */
+    bottom: 30px;          /* 화면 맨 아래에서 30픽셀 위로 */
+    right: 30px;           /* 화면 맨 오른쪽에서 30픽셀 왼쪽으로 */
+    padding: 12px 20px;    /* 버튼 안쪽 여백 (통통하게) */
+    background-color: #2e5a44; /* 아까 고르신 세련된 초록색 배경 */
+    color: white;          /* 글자 색상은 하얗게 */
+    text-decoration: none; /* 글자 밑줄 제거 */
+    border-radius: 50px;   /* 버튼 모서리를 둥글게 동그라미로 */
+    font-weight: bold;     /* 글씨 두껍게 */
+    z-index: 9999;         /* 다른 어떤 화면 요소보다 맨 위에 뜨게 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 버튼 아래 은은한 그림자 */
+}
 </style>
 </head>
 <body>
+  <a href="#" class="live-chat-btn">실시간 상담</a>
 
   <section class="hero">
 
