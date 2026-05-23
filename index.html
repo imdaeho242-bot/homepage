@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>종합 비즈니스 플랫폼</title>
-  /* 1. 전체 기본 바탕 디자인 */
+<style>
+/* 1. 전체 기본 바탕 디자인 */
 body {
     font-family: 'Malgun Gothic', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f9; /* 눈이 편안하고 트렌디한 연회색 바탕 */
+    background-color: #f4f6f9; /* 연회색 바탕 */
     color: #333;
 }
 
 /* 2. 상단 비즈니스 종합 플랫폼 공간 */
 header {
-    background: linear-gradient(135deg, #1e2d42 0%, #2c3e50 100%); /* 다크 네이비와 슬레이트 블루의 세련된 그라데이션 */
+    background: linear-gradient(135deg, #1e2d42 0%, #2c3e50 100%); /* 네이비 그라데이션 */
     color: white;
     padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 하단 은은한 그림자 효과 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
@@ -27,17 +28,17 @@ header h1 {
     font-size: 2.8rem;
     letter-spacing: -1px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 글자가 더 또렷하게 보이는 효과 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 header p {
     margin: 15px 0 0 0;
     opacity: 0.9;
     font-size: 1.2rem;
-    color: #dfb76c; /* 하단 부제목은 은은한 골드빛 색상으로 강조 */
+    color: #dfb76c; /* 골드빛 색상 */
 }
 
-/* 3. 3대 핵심 사업 블록들이 모여있는 공간 바구니 */
+/* 3. 큰 바구니 공간 */
 .container {
     max-width: 1200px;
     margin: 50px auto;
@@ -47,21 +48,20 @@ header p {
 .main-services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* 카드 사이 공간을 조금 더 넓혀 시원하게 연출 */
+    gap: 30px;
 }
 
-/* 4. 개별 사업 소개 공간 (미용재료, 렌탈, 상품중개 상자) */
+/* 4. 개별 사업 소개 공간 (카드 상자) */
 .card {
     background-color: white;
-    border-radius: 12px; /* 모서리를 부드럽고 둥글게 */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); /* 부드럽고 고전적인 그림자 효과 */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     padding: 35px 25px;
     text-align: center;
     transition: all 0.3s ease;
-    border-top: 5px solid #1e2d42; /* 각 상자 윗부분에 다크 네이비 포인트 테두리 선 */
+    border-top: 5px solid #1e2d42;
 }
 
-/* 마우스를 상자 위에 올렸을 때 살짝 위로 떠오르는 이쁜 연출 */
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
@@ -77,32 +77,38 @@ header p {
 /* 5. 바로가기 버튼 디자인 */
 .card a {
     display: inline-block;
-    background-color: #1e2d42; /* 신뢰감을 주는 네이비 버튼 */
+    background-color: #1e2d42;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 25px; /* 원형으로 이쁜 타원형 버튼 */
+    border-radius: 25px;
     font-weight: bold;
     font-size: 0.95rem;
     margin-top: 20px;
     transition: background-color 0.2s;
 }
 
-/* 마우스를 버튼 위에 올렸을 때 색상이 강조되는 효과 */
 .card a:hover {
-    background-color: #dfb76c; /* 마우스 올리면 은은한 골드빛/오렌지빛으로 변경 */
+    background-color: #dfb76c;
     color: #1e2d42;
 }
 
-/* 6. 앞으로 아래쪽에 새로 추가하실 [패밀리 서비스 공간] 디자인 */
+/* 6. 패밀리 서비스 공간 디자인 */
 .family-section {
-    background-color: #eef2f7; /* 다른 공간과 구분되도록 약간 푸른빛이 도는 연회색 바탕 */
+    background-color: #eef2f7;
     padding: 50px 20px;
     margin-top: 60px;
     text-align: center;
     border-radius: 12px;
-    border: 1px dashed #cbd5e1; /* 부드러운 점선 테두리 */
+    border: 1px dashed #cbd5e1;
 }
+
+.family-section h2 {
+    color: #1e2d42;
+    margin-bottom: 20px;
+}
+</style>
+ 
 
 .family-section h2 {
     color: #1e2d42;
