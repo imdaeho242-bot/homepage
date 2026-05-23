@@ -1,89 +1,42 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>종합 비즈니스 플랫폼</title>
-<style>
-/* 전체 스타일 */
-body { font-family: 'Malgun Gothic', sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-
-/* 헤더 스타일 */
-header { background: linear-gradient(135deg, #1e2d42 0%, #2c3e50 100%); color: white; padding: 60px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); }
-header h1 { margin: 0; font-size: 2.5rem; font-weight: bold; }
-header p { margin: 10px 0 0; opacity: 0.8; font-size: 1.1rem; color: #dfb76c; }
-
-/* 메인 레이아웃 */
-.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-.main-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-/* 카드 상자 스타일 */
-.card { background-color: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); padding: 40px 25px; text-align: center; border-top: 8px solid #1e2d42; transition: 0.3s; }
-.card:hover { transform: translateY(-10px); }
-.card h3 { color: #1e2d42; margin-bottom: 20px; }
-.card a { display: inline-block; background-color: #1e2d42; color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s; }
-.card a:hover { background-color: #dfb76c; color: white; }
-  .family-section h2 { 
-        color: #1e2d42; 
-        margin-bottom: 20px; 
-    }
-</style>
-
-
-.family-section h2 {
-    color: #1e2d42;
-   
-}
-</style>
- 
-
-.family-section h2 {
-    color: #1e2d42;
-    margin-bottom: 20px;
+    <title>비즈니스 종합 플랫폼</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; }
+        header { background: #1e2d42; color: white; padding: 40px; text-align: center; }
+        .container { display: flex; justify-content: center; gap: 20px; padding: 40px; flex-wrap: wrap; }
+        .card { background: white; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .card h3 { color: #1e2d42; }
+        .card a { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #dfb76c; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>비즈니스 종합 플랫폼</h1>
-        <p>미용재료 유통 · 기업/가정 렌탈 · 상품 중개 전문</p>
     </header>
 
     <div class="container">
-        <div class="main-services">
-            <div class="card">
-                <h2>미용재료 유통</h2>
-                <p><span class="accent-text">미용재료 유통</span> . 기업 장비/의료 기구/창업 설비/가전 렌탈 등</p>
-            <a href="https://blog.naver.com/dlaeogh3"  class="Link-btn" target=_blank">미용재료 유통 바로가기</a>
-                </div>
-            
-           <div class="card">
-            <h2>🛠️ 종합 렌탈 서비스</h2>
-            <p><b>[B2B]</b> 기계·의료 장비, 창업 설비, 비품, 공조 시설부터 운영자금 컨설팅까지!<br><b>[B2C]</b> 안심하고 사용하는 가정용 생활 가전 렌탈 일체.</p>
-            <a href="https://blog.naver.com/sora2220" class="Link-btn" target="_blank">종합 렌탈 바로가기</a>
-        </div>
-
         <div class="card">
-            <h2>💝 상품 중개 & 판매</h2>
-            <p>친환경 음식물 처리기를 비롯한 우수한 리빙/산업 상품의 중개 및 판매업을 통해 최상의 가치를 전달합니다.</p>
-            <a href="#" class="Link-btn" target="_blank">상품 중개 바로가기</a>
+            <h3>미용재료 유통</h3>
+            <p>미용재료 유통, 기업/가정 렌탈 등</p>
+            <a href="#">미용재료 유통 바로가기</a>
         </div>
-
-</div>
-        <div class="family-links" style="width: 100% !important; max-width: 100% !important; display: block !important; clear: both !important; padding: 60px 0 !important; background-color: #f8fafc !important; text-align: center;">
-    <h3 style="margin-top: 0; margin-bottom: 15px; font-size: 1.8rem; text-align: center !important;">👨‍👩‍👧‍👦 패밀리 서비스 바로가기</h3>
-    <p style="margin-bottom: 30px; font-size: 1.1rem; color: #555; text-align: center !important;">가족이 함께 운영하는 신뢰의 환경 및 복지 서비스입니다.</p>
-    
-    <div class="btn-group" style="display: flex !important; justify-content: center !important; align-items: center !important; gap: 20px !important;">
-        <a href="https://blog.naver.com/tmdgusdk119" class="Link-btn" target="_blank" style="margin: 0 !important; padding: 12px 30px !important; font-size: 1rem;">🌳 편리한 경 바로가기</a>
-        <a href="https://blog.naver.com/haeyoung924" class="Link-btn" target="_blank" style="margin: 0 !important; padding: 12px 30px !important; font-size: 1rem;">❤️ 요양보호 센터 바로가기</a>
+        <div class="card">
+            <h3>종합 렌탈 서비스</h3>
+            <p>기업 및 가정용 렌탈 솔루션</p>
+            <a href="#">종합 렌탈 바로가기</a>
+        </div>
+        <div class="card">
+            <h3>상품 중개 & 판매</h3>
+            <p>우수한 리빙/산업 상품 중개</p>
+            <a href="#">상품 중개 바로가기</a>
+        </div>
     </div>
-</div>
-
-
-    <footer>
-        <p>&copy; 2026 비즈니스 플랫폼. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
+
 
