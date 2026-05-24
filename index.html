@@ -20,19 +20,33 @@
     <div class="header-banner">
          <h1>최고의 파트너와 성공적인 비즈니스</h1>
     </div>
-   .header-banner {
-    background-image: url('1000018816.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    height: 400px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    color: white !important;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5) !important;
-    position: relative !important;
-    z-index: 10 !important;
+  .header-banner {
+  /* 이미지 파일명을 실제 이름으로 꼭 바꾸세요! 예: marble_bg.jpg */
+  background-image: url('골드_마블_파일이름.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.header-banner h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+.header-banner h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: white;
+  margin: 15px auto 0;
 
   }      
         <h1>최고의 파트너와 성공적인 비즈니스</h1>
