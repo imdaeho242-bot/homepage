@@ -47,10 +47,14 @@
       font-family: Arial, "Noto Sans KR", sans-serif;
     }
 
-    body {
-      background: #1f2937;
-      color: #111827;
-    }
+   body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+}
+
 
     .hero {
       min-height: 100vh;
@@ -301,7 +305,21 @@ modal-overlay {
     z-index: 9999;         /* 다른 어떤 화면 요소보다 맨 위에 뜨게 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 버튼 아래 은은한 그림자 */
 }
-</style>
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 10px;
+}
+
+.card img {
+    width: 80px; 
+    height: 80px;
+    margin-bottom: 20px;
+}
+    </style>
 </head>
 <body>
   <a href="#" class="live-chat-btn">실시간 상담</a>
@@ -314,30 +332,26 @@ modal-overlay {
       미용재료 유통 · 기업/가정 렌탈 · 상품 중개 전문 플랫폼
     </p>
 
-<div class="card-wrap" style="display: flex; gap: 20px; flex-wrap: wrap;">
-
-    <div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
-        <h3>미용재료 유통</h3>
-        <p>전문 미용재료 및 클리닉 제품 공급</p>
-        <a class="btn" href="https://blog.naver.com/dlaeogh3" target="_blank" style="display: block; margin-bottom: 5px; background-color: #1e3a8a; color: white; padding: 10px; text-align: center; text-decoration: none;">미용재료 바로가기</a>
-        <a class="btn" href="https://blog.naver.com/tmdgusdk119" target="_blank" style="display: block; background-color: #1e3a8a; color: white; padding: 10px; text-align: center; text-decoration: none;">천리환경 바로가기</a>
-    </div>
-
-    <div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
-        <h3>렌탈 금융</h3>
-        <p>병원, 창업, 생활가전 초기 부담 완화</p>
-        <a class="btn" href="https://blog.naver.com/sora2220" target="_blank" style="display: block; margin-bottom: 5px; background-color: #1e3a8a; color: white; padding: 10px; text-align: center; text-decoration: none;">렌탈 바로가기</a>
-        <a class="btn" href="https://blog.naver.com/haeyoung924" target="_blank" style="display: block; background-color: #1e3a8a; color: white; padding: 10px; text-align: center; text-decoration: none;">햇빛재가센터 바로가기</a>
-    </div>
-
-    <div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
-        <h3>상품 중계 및 판매</h3>
-        <p>필요한 상품을 연결하고 판매합니다.</p>
-        <a class="btn" href="https://m.mybox.naver.com/..." target="_blank" style="display: block; margin-bottom: 5px; background-color: #d97706; color: white; padding: 10px; text-align: center; text-decoration: none;">상품목록 보기</a>
-        <a class="btn" href="https://open.kakao.com/..." target="_blank" style="display: block; background-color: #d97706; color: white; padding: 10px; text-align: center; text-decoration: none;">실시간 상담하기</a>
-    </div>
-
+<div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
+    <img src="https://via.placeholder.com/80" alt="미용">
+    <h3>미용재료 유통</h3>
+    <p>전문 미용재료 및 클리닉 제품 공급</p>
+    <a class="btn" href="https://blog.naver.com/dlaeogh3" target="_blank" style="display: block; margin-bottom: 5px; background-color: #1e3a8a; color: white; padding: 10px; text-decoration: none;">미용재료 바로가기</a>
+    <a class="btn" href="https://blog.naver.com/tmdgusdk119" target="_blank" style="display: block; background-color: #1e3a8a; color: white; padding: 10px; text-decoration: none;">천리환경 바로가기</a>
 </div>
 
+<div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
+    <img src="https://via.placeholder.com/80" alt="렌탈">
+    <h3>렌탈 금융</h3>
+    <p>병원, 창업, 생활가전 초기 부담 완화</p>
+    <a class="btn" href="https://blog.naver.com/sora2220" target="_blank" style="display: block; margin-bottom: 5px; background-color: #1e3a8a; color: white; padding: 10px; text-decoration: none;">렌탈 바로가기</a>
+    <a class="btn" href="https://blog.naver.com/haeyoung924" target="_blank" style="display: block; background-color: #1e3a8a; color: white; padding: 10px; text-decoration: none;">햇빛재가센터 바로가기</a>
+</div>
 
+<div class="card" style="flex: 1; min-width: 300px; padding: 25px; border: 1px solid #ccc; background: white;">
+    <img src="https://via.placeholder.com/80" alt="상품">
+    <h3>상품 중계 및 판매</h3>
+    <p>필요한 상품을 연결하고 판매합니다.</p>
+    <a class="btn" href="https://https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" target="_blank" style="display: block; margin-bottom: 5px; background-color: #d97706; color: white; padding: 10px; text-decoration: none;">상품 중계 및 판매 바로가기</a>
+    <a class="btn" href="https://카톡상담주소입력" target="_blank" style="display: block; background-color: #d97706; color: white; padding: 10px; text-decoration: none;">실시간 상담하기</a>
 </div>
