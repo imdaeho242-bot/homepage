@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>비즈니스 종합 플랫폼</title>
 
@@ -13,200 +13,300 @@
 
     body {
       margin: 0;
-      font-family: 'Noto Sans KR', Arial, sans-serif;
-      background: linear-gradient(180deg, #0c3424, #061b13);
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: radial-gradient(circle at top, #123f2d 0%, #061b13 70%);
       color: #111;
     }
 
-    .page {
+    .wrap {
+      width: 100%;
       min-height: 100vh;
-      padding: 60px 20px 30px;
+      padding: 45px 16px 80px;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    .title {
+    .main-title {
       text-align: center;
-      color: #d9a35f;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
 
-    .title h1 {
-      font-size: 28px;
-      margin: 0 0 8px;
-      font-weight: 800;
-    }
-
-    .title p {
+    .main-title h1 {
       margin: 0;
-      color: #ffffff;
-      font-size: 14px;
-      letter-spacing: 1px;
+      color: #e7b870;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
-    .triangle-area {
+    .main-title p {
+      margin: 10px 0 0;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .triangle-stage {
       position: relative;
       width: 100%;
-      max-width: 900px;
-      height: 560px;
+      max-width: 420px;
+      height: 520px;
       margin: 0 auto;
     }
 
-    .triangle-card {
+    .triangle {
       position: absolute;
-      width: 360px;
-      height: 430px;
+      width: 250px;
+      height: 310px;
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       text-align: center;
-      padding-top: 120px;
-      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.35));
+      padding: 0 22px 48px;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.35);
     }
 
-    .triangle-inner {
-      width: 78%;
-      transform: translateY(60px);
+    .triangle-content {
+      transform: translateY(10px);
     }
 
-    .triangle-inner h2 {
-      font-size: 26px;
-      margin: 0 0 12px;
+    .triangle h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
       font-weight: 900;
       color: #000;
-    }
-
-    .triangle-inner p {
-      font-size: 17px;
-      margin: 0 0 20px;
-      line-height: 1.45;
-      color: #111;
-    }
-
-    .triangle-inner a {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 30px;
-      color: #fff;
-      font-size: 17px;
-      font-weight: 800;
-      text-decoration: none;
-      background: #333;
+      letter-spacing: -1px;
       white-space: nowrap;
     }
 
-    /* 1번: 미용재료 - 제일 앞 */
-    .beauty {
-      left: 40px;
-      top: 70px;
-      background: linear-gradient(180deg, #fffdf4, #e9dba9);
-      z-index: 3;
+    .triangle p {
+      margin: 0 0 14px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #111;
     }
 
-    .beauty .triangle-inner a {
-      background: #b28b00;
+    .triangle a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    /* 2번: 기업·가정 렌탈 - 중간 */
-    .rental {
-      right: 80px;
-      top: 10px;
-      background: linear-gradient(180deg, #ffffff, #e7e7e7);
-      z-index: 2;
-    }
-
-    .rental .triangle-inner a {
-      background: #555;
-    }
-
-    /* 3번: 상품 중개 - 뒤쪽 */
+    /* 상품 중개: 왼쪽 뒤 */
     .broker {
-      left: 230px;
-      top: 140px;
-      background: linear-gradient(180deg, #f7f7f7, #dcdcdc);
+      left: 0;
+      top: 150px;
+      background: linear-gradient(180deg, #f7f7f7 0%, #d6d6d6 100%);
       z-index: 1;
     }
 
-    .broker .triangle-inner a {
+    .broker a {
       background: #333;
     }
 
-    .consult-button {
-      position: fixed;
-      right: 28px;
-      bottom: 85px;
-      background: #3b7a5a;
-      color: #fff;
-      padding: 16px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 900;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.25);
-      z-index: 20;
+    /* 기업·가정 렌탈: 오른쪽 뒤, 두 번째 */
+    .rental {
+      right: 0;
+      top: 0;
+      background: linear-gradient(180deg, #ffffff 0%, #e4e4e4 100%);
+      z-index: 2;
     }
 
-    .footer-links {
-      max-width: 900px;
-      margin: 10px auto 0;
+    .rental a {
+      background: #31583f;
+    }
+
+    /* 미용재료: 가운데 맨 앞 */
+    .beauty {
+      left: 50%;
+      top: 115px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #fff8df 0%, #ead99c 100%);
+      z-index: 3;
+    }
+
+    .beauty a {
+      background: #b68a00;
+    }
+
+    .bottom-menu {
+      width: 100%;
+      max-width: 420px;
+      margin: 20px auto 0;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 18px;
       text-align: center;
-      font-size: 13px;
-      color: #d8d8d8;
     }
 
-    .footer-links a {
-      color: #d8d8d8;
-      text-decoration: none;
-      margin: 0 8px;
+    .bottom-menu a {
       display: inline-block;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 13px;
+      margin: 5px 8px;
     }
 
-    .footer-links a:hover {
-      color: #ffffff;
+    .bottom-menu a:hover {
+      color: #fff;
       text-decoration: underline;
     }
 
-    /* 모바일 화면 조정 */
-    @media (max-width: 768px) {
-      .page {
-        padding-top: 45px;
+    /* 컴퓨터 화면 */
+    @media (min-width: 769px) {
+      .wrap {
+        padding-top: 60px;
       }
 
-      .title h1 {
-        font-size: 23px;
+      .main-title h1 {
+        font-size: 36px;
       }
 
-      .title p {
-        font-size: 12px;
+      .main-title p {
+        font-size: 18px;
       }
 
-      .triangle-area {
-        height: 620px;
-        max-width: 390px;
+      .triangle-stage {
+        max-width: 760px;
+        height: 560px;
       }
 
-      .triangle-card {
-        width: 260px;
-        height: 330px;
-        padding-top: 90px;
+      .triangle {
+        width: 340px;
+        height: 420px;
+        padding-bottom: 70px;
       }
 
-      .triangle-inner {
-        width: 80%;
-        transform: translateY(48px);
+      .triangle h2 {
+        font-size: 28px;
       }
 
-      .triangle-inner h2 {
-        font-size: 22px;
-        margin-bottom: 8px;
+      .triangle p {
+        font-size: 17px;
       }
 
-      .triangle-inner p {
+      .triangle a {
+        font-size: 17px;
+        padding: 13px 22px;
+      }
+
+      .broker {
+        left: 40px;
+        top: 140px;
+      }
+
+      .rental {
+        right: 40px;
+        top: 0;
+      }
+
+      .beauty {
+        top: 120px;
+      }
+
+      .bottom-menu {
+        max-width: 760px;
+      }
+
+      .bottom-menu a {
         font-size: 15px;
-        margin-bottom: 12px;
+      }
+    }
+
+    /* 작은 휴대폰 화면 */
+    @media (max-width: 390px) {
+      .triangle-stage {
+        height: 500px;
       }
 
-      .triangle-inner a {
-        font-size: 15px;
-        padding: 10px 15
+      .triangle {
+        width: 235px;
+        height: 295px;
+      }
+
+      .triangle h2 {
+        font-size: 20px;
+      }
+
+      .triangle p {
+        font-size: 13px;
+      }
+
+      .triangle a {
+        font-size: 13px;
+        padding: 9px 13px;
+      }
+
+      .rental {
+        right: -5px;
+      }
+
+      .broker {
+        left: -5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="main-title">
+      <h1>비즈니스 종합 플랫폼</h1>
+      <p>미용재료 · 기업/가정 렌탈 · 상품중개</p>
+    </div>
+
+    <div class="triangle-stage">
+
+      <!-- 맨 뒤: 상품 중개 -->
+      <div class="triangle broker">
+        <div class="triangle-content">
+          <h2>상품 중개</h2>
+          <p>필요한 상품 연결</p>
+          <a href="https://여기에-상품중개-주소" target="_blank">
+            상품 중개 바로가기
+          </a>
+        </div>
+      </div>
+
+      <!-- 두 번째: 기업·가정 렌탈 -->
+      <div class="triangle rental">
+        <div class="triangle-content">
+          <h2>기업·가정 렌탈</h2>
+          <p>기업, 생활가전 운영 지원</p>
+          <a href="https://여기에-렌탈-주소" target="_blank">
+            기업·가정 렌탈 바로가기
+          </a>
+        </div>
+      </div>
+
+      <!-- 맨 앞: 미용재료 -->
+      <div class="triangle beauty">
+        <div class="triangle-content">
+          <h2>미용재료</h2>
+          <p>미용재료 및 클리닉 제품</p>
+          <a href="https://여기에-미용재료-주소" target="_blank">
+            미용재료 바로가기
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-menu">
+      <a href="https://여기에-천리환경-주소" target="_blank">
+        천리환경 바로가기
+      </a>
+
+      <a href="https://여기에-햇빛노인재가센터-주소" target="_blank">
+        햇빛 노인 재가 센터 바로가기
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
