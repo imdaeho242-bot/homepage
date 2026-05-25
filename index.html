@@ -6,21 +6,25 @@
   <title>비즈니스 종합 플랫폼</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0b3a28, #061b13);
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #073322;
       color: white;
     }
 
     .wrap {
       min-height: 100vh;
-      padding: 45px 18px 60px;
+      padding: 45px 16px 70px;
       text-align: center;
     }
 
     h1 {
-      color: #e6b56d;
+      color: #e7b870;
       font-size: 30px;
       margin: 0 0 12px;
       font-weight: 900;
@@ -28,7 +32,7 @@
 
     .subtitle {
       font-size: 15px;
-      margin-bottom: 35px;
+      margin: 0 0 35px;
       color: #ffffff;
     }
 
@@ -37,38 +41,32 @@
       margin: 0 auto;
     }
 
-    .row {
+    .top-row {
       display: flex;
       gap: 14px;
       margin-bottom: 18px;
+      align-items: stretch;
     }
 
     .card {
-      background: #f4f4f4;
+      flex: 1;
+      background: #f3f3f3;
       color: #111;
       border-radius: 35px;
-      padding: 28px 14px;
+      padding: 24px 10px;
+      min-height: 260px;
       box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      flex: 1;
-      min-height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .main-card {
-      background: linear-gradient(180deg, #fff5d7, #ead89d);
-      width: 78%;
-      margin: 0 auto;
-      min-height: 210px;
-      border-radius: 45px;
-    }
-
     .card h2 {
-      font-size: 21px;
+      font-size: 20px;
       margin: 0 0 10px;
       font-weight: 900;
       color: #000;
+      line-height: 1.25;
     }
 
     .card p {
@@ -78,35 +76,78 @@
       color: #222;
     }
 
-    .card a {
+    .btn {
       display: inline-block;
-      padding: 10px 14px;
-      border-radius: 30px;
       color: white;
       text-decoration: none;
+      border-radius: 30px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: bold;
+      padding: 11px 14px;
+      line-height: 1.25;
     }
 
-    .rental a {
-      background: #31583f;
+    .btn-block {
+      display: block;
+      width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 6px;
+      font-size: 12px;
     }
 
-    .broker a {
+    .btn-company {
+      background: #24563a;
+      margin-bottom: 9px;
+    }
+
+    .btn-home {
+      background: #b38312;
+    }
+
+    .btn-broker {
       background: #333333;
     }
 
-    .beauty a {
+    .beauty-card {
+      width: 82%;
+      margin: 0 auto 18px;
+      background: #f4df9d;
+      color: #111;
+      border-radius: 45px;
+      padding: 36px 15px;
+      min-height: 210px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .beauty-card h2 {
+      font-size: 25px;
+      margin: 0 0 12px;
+      color: #000;
+      font-weight: 900;
+    }
+
+    .beauty-card p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0 0 18px;
+      color: #222;
+    }
+
+    .btn-beauty {
       background: #b78b05;
       font-size: 15px;
-      padding: 12px 20px;
+      padding: 12px 22px;
     }
 
     .bottom-links {
       max-width: 430px;
-      margin: 35px auto 0;
+      margin: 38px auto 0;
       padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(255,255,255,0.35);
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -114,10 +155,10 @@
     }
 
     .bottom-links a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
       font-size: 16px;
-      font-weight: 800;
+      font-weight: bold;
       padding: 12px 18px;
       border-radius: 30px;
       border: 1px solid rgba(255,255,255,0.35);
@@ -133,12 +174,13 @@
         font-size: 13px;
       }
 
-      .row {
+      .top-row {
         gap: 10px;
       }
 
       .card {
-        padding: 24px 10px;
+        padding: 22px 8px;
+        min-height: 270px;
       }
 
       .card h2 {
@@ -149,9 +191,14 @@
         font-size: 13px;
       }
 
-      .card a {
+      .btn-block {
+        font-size: 11px;
+        padding: 10px 5px;
+      }
+
+      .btn-broker {
         font-size: 12px;
-        padding: 9px 11px;
+        padding: 10px 10px;
       }
 
       .bottom-links a {
@@ -162,6 +209,7 @@
 </head>
 
 <body>
+
   <div class="wrap">
 
     <h1>비즈니스 종합 플랫폼</h1>
@@ -172,23 +220,39 @@
 
     <div class="card-area">
 
-      <div class="row">
+      <div class="top-row">
 
-        <div class="card rental">
+        <!-- 기업·가정 렌탈 카드 -->
+        <div class="card">
           <div>
             <h2>기업·가정 렌탈</h2>
-            <p>기업, 생활가전<br>운영 지원</p>
-            <a href="https://여기에-렌탈-주소" target="_blank">
-              렌탈 바로가기
+
+            <p>
+              기업 렌탈과<br>
+              생활가전 렌탈 안내
+            </p>
+
+            <a href="https://여기에-기업렌탈-주소" target="_blank" class="btn btn-block btn-company">
+              기업 렌탈 바로가기
+            </a>
+
+            <a href="https://여기에-생활가전렌탈-주소" target="_blank" class="btn btn-block btn-home">
+              생활가전 렌탈 바로가기
             </a>
           </div>
         </div>
 
-        <div class="card broker">
+        <!-- 상품 중개 카드 -->
+        <div class="card">
           <div>
             <h2>상품 중개</h2>
-            <p>필요한 상품<br>연결 상담</p>
-            <a href="https://여기에-상품중개-주소" target="_blank">
+
+            <p>
+              필요한 상품<br>
+              연결 상담
+            </p>
+
+            <a href="https://여기에-상품중개-주소" target="_blank" class="btn btn-broker">
               상품중개 바로가기
             </a>
           </div>
@@ -196,11 +260,17 @@
 
       </div>
 
-      <div class="card main-card beauty">
+      <!-- 미용재료 카드 -->
+      <div class="beauty-card">
         <div>
           <h2>미용재료</h2>
-          <p>미용재료 및<br>클리닉 제품</p>
-          <a href="https://여기에-미용재료-주소" target="_blank">
+
+          <p>
+            미용재료 및<br>
+            클리닉 제품
+          </p>
+
+          <a href="https://여기에-미용재료-주소" target="_blank" class="btn btn-beauty">
             미용재료 바로가기
           </a>
         </div>
@@ -208,7 +278,9 @@
 
     </div>
 
+    <!-- 하단 바로가기 -->
     <div class="bottom-links">
+
       <a href="https://여기에-천리환경-주소" target="_blank">
         천리환경 바로가기
       </a>
@@ -216,8 +288,10 @@
       <a href="https://여기에-햇빛노인재가센터-주소" target="_blank">
         햇빛 노인 재가 센터 바로가기
       </a>
+
     </div>
 
   </div>
+
 </body>
 </html>
