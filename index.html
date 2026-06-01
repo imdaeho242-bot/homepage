@@ -1,301 +1,142 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <title><휴브릿지 비지니스 플랫폼</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="휴브릿지 비지니스 플랫폼">
-<meta property="og:description" content="위드모아 홈페이지입니다. 미용재료, 렌탈, 상품중개, 사업자금 상담 바로가기">
-<meta property="og:url" content="https://imdaeho242-bot.github.io">
-<meta property="og:type" content="website">
-   <style>
 
+  <!-- 카톡/문자/SNS 미리보기 제목 -->
+  <title>휴브릿지 비즈니스 플랫폼</title>
+  <meta name="description" content="렌탈, 미용재료, 상품중개, 사업자금 상담을 연결하는 실무형 비즈니스 상담 플랫폼입니다.">
+
+  <!-- 카카오톡, 문자, SNS 미리보기용 OG 코드 -->
+  <meta property="og:title" content="휴브릿지 비즈니스 플랫폼">
+  <meta property="og:description" content="렌탈, 미용재료, 상품중개, 사업자금 상담 플랫폼">
+  <meta property="og:url" content="https://imdaeho242-bot.github.io/homepage/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="휴브릿지 비즈니스 플랫폼">
+
+  <style>
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Arial, "Noto Sans KR", sans-serif;
-      background: #073322;
-      color: white;
+      padding: 0;
+      font-family: Arial, 'Noto Sans KR', sans-serif;
+      background: #eef5fb;
+      color: #1f2f46;
     }
 
     .wrap {
+      width: 100%;
       min-height: 100vh;
-      padding: 45px 16px 70px;
+      padding: 28px 18px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 42px 24px 34px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
 
     h1 {
-      color: #e7b870;
-      font-size: 30px;
-      margin: 0 0 12px;
-      font-weight: 900;
+      margin: 0 0 24px;
+      font-size: 34px;
+      line-height: 1.28;
+      font-weight: 800;
+      color: #1d3f6e;
+      word-break: keep-all;
     }
 
-    .subtitle {
-      font-size: 15px;
-      margin: 0 0 35px;
-      color: #ffffff;
-    }
-
-    .card-area {
-      max-width: 430px;
-      margin: 0 auto;
-    }
-
-    .top-row {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 18px;
-      align-items: stretch;
-    }
-
-    .card {
-      flex: 1;
-      background: #f3f3f3;
-      color: #111;
-      border-radius: 35px;
-      padding: 24px 10px;
-      min-height: 260px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card h2 {
-      font-size: 20px;
-      margin: 0 0 10px;
-      font-weight: 900;
-      color: #000;
-      line-height: 1.25;
-    }
-
-    .card p {
-      font-size: 14px;
-      line-height: 1.45;
-      margin: 0 0 16px;
-      color: #222;
+    .desc {
+      margin: 0 0 34px;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #444;
+      word-break: keep-all;
     }
 
     .btn {
-      display: inline-block;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 11px 14px;
-      line-height: 1.25;
-    }
-
-    .btn-block {
       display: block;
-      width: 92%;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 10px 6px;
-      font-size: 12px;
-    }
-
-    .btn-company {
-      background: #24563a;
-      margin-bottom: 9px;
-    }
-
-    .btn-home {
-      background: #b38312;
-    }
-
-    .btn-broker {
-      background: #333333;
-    }
-
-    .beauty-card {
-      width: 82%;
-      margin: 0 auto 18px;
-      background: #f4df9d;
-      color: #111;
-      border-radius: 45px;
-      padding: 36px 15px;
-      min-height: 210px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .beauty-card h2 {
-      font-size: 25px;
-      margin: 0 0 12px;
-      color: #000;
-      font-weight: 900;
-    }
-
-    .beauty-card p {
-      font-size: 15px;
-      line-height: 1.5;
-      margin: 0 0 18px;
-      color: #222;
-    }
-
-    .btn-beauty {
-      background: #b78b05;
-      font-size: 15px;
-      padding: 12px 22px;
-    }
-
-    .bottom-links {
-      max-width: 430px;
-      margin: 38px auto 0;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,0.35);
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .bottom-links a {
-      color: white;
+      width: 100%;
+      margin: 14px 0;
+      padding: 20px 18px;
+      background: #1d3f6e;
+      color: #ffffff;
       text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 12px 18px;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      font-size: 21px;
+      font-weight: 700;
+      box-shadow: 0 8px 16px rgba(29, 63, 110, 0.18);
     }
 
-    @media (max-width: 390px) {
-      h1 {
-        font-size: 26px;
-      }
+    .btn:hover {
+      background: #16345c;
+    }
 
-      .subtitle {
-        font-size: 13px;
-      }
+    .phone {
+      margin-top: 34px;
+      font-size: 28px;
+      font-weight: 800;
+      color: #102944;
+      line-height: 1.4;
+    }
 
-      .top-row {
-        gap: 10px;
-      }
+    .sub {
+      margin-top: 22px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #666;
+      word-break: keep-all;
+    }
 
-      .card {
-        padding: 22px 8px;
-        min-height: 270px;
-      }
-
-      .card h2 {
-        font-size: 18px;
-      }
-
-      .card p {
-        font-size: 13px;
-      }
-
-      .btn-block {
-        font-size: 11px;
-        padding: 10px 5px;
-      }
-
-      .btn-broker {
-        font-size: 12px;
-        padding: 10px 10px;
-      }
-
-      .bottom-links a {
-        font-size: 14px;
-      }
+    .footer {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 
 <body>
-
   <div class="wrap">
+    <div class="card">
+      <h1>휴브릿지<br>비즈니스 플랫폼</h1>
 
-    <h1>휴브릿지 비즈니스 허브</h1>
+      <p class="desc">
+        렌탈, 미용재료, 상품중개,<br>
+        사업자금 상담을 연결하는<br>
+        실무형 비즈니스 상담 플랫폼입니다.
+      </p>
 
-    <div class="subtitle">
-      미용재료 · 기업/가정 렌탈 · 상품중개
-    </div>
+      <a class="btn" href="tel:010-6451-9115">전화 상담 바로가기</a>
 
-    <div class="card-area">
+      <a class="btn" href="https://blog.naver.com/" target="_blank">네이버 블로그 바로가기</a>
 
-      <div class="top-row">
+      <a class="btn" href="https://imdaeho242-bot.github.io/homepage/" target="_blank">관련 사이트 바로가기</a>
 
-        <!-- 기업·가정 렌탈 카드 -->
-        <div class="card">
-          <div>
-            <h2>기업·가정 렌탈</h2>
-
-            <p>
-              의료.기계 렌탈과<br>
-              생활 렌탈 안내
-            </p>
-<a href="https://blog.naver.com/sora2220" target="_blank" class="btn btn-block btn-company">
-  장비 렌탈 바로가기
-</a>
-
-<a href="http://www.withmoa.co.kr" target="_blank" class="btn btn-block btn-company">
-  생활 렌탈 바로가기
-</a>
-         
-          </div>
-        </div>
-
-        <!-- 상품 중개 카드 -->
-        <div class="card">
-          <div>
-            <h2>제로스톤 중개</h2>
-
-            <p>
-              필요한 상품<br>
-              연결 상담
-            </p>
-
-            <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" target="_blank" class="btn btn-broker">
-              제로스톤 바로가기
-            </a>
-          </div>
-        </div>
-
+      <div class="phone">
+        상담 문의<br>
+        010-6451-9115
       </div>
 
-      <!-- 미용재료 카드 -->
-      <div class="beauty-card">
-        <div>
-          <h2>미용재료</h2>
+      <p class="sub">
+        사업자 렌탈 · 미용재료 · 상품중개 · 운영자금 상담을<br>
+        한곳에서 연결하는 비즈니스 상담 창구입니다.
+      </p>
 
-          <p>
-            미용재료 및<br>
-            클리닉 제품
-          </p>
-
-          <a href="https://blog.naver.com/dlaeogh3" target="_blank" class="btn btn-beauty">
-            미용재료 바로가기
-          </a>
-        </div>
+      <div class="footer">
+        Hu Bridge Business Platform
       </div>
-
     </div>
-
-    <!-- 하단 바로가기 -->
-    <div class="bottom-links">
-
-      <a href="https://blog.naver.com/tmdgusdk119" target="_blank">
-        천리환경 바로가기
-      </a>
-
-      <a href="https://blog.naver.com/haeyoung924" target="_blank">
-        햇빛 노인 재가 센터 바로가기
-      </a>
-
-    </div>
-
   </div>
-
 </body>
 </html>
