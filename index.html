@@ -55,7 +55,7 @@
             margin: 10px 0 0;
         }
 
-        /* 카드 그리드 영역 (좌우 2열 구조 고정) */
+        /* 카드 그리드 영역 (좌측/우측 2열로 정상 배치해 주는 핵심 설정) */
         .content-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -76,10 +76,10 @@
             justify-content: space-between;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             box-sizing: border-box;
-            min-height: 200px;
+            min-height: 210px;
         }
 
-        /* 미용재료 카드 (밑바닥에 가로로 길게 깔아주는 스타일) */
+        /* 미용재료 카드 (밑바닥에 가로로 넓게 깔아주는 스타일) */
         .card-full {
             grid-column: span 2;
             min-height: 140px;
@@ -150,7 +150,7 @@
 <body>
     <div class="mobile-container">
         <header class="main-header">
-            <h1 class="logo-text">휴 브릿지 비즈24</h1>
+            <h1 class="logo-text">휴 브릿지 비즈 365</h1>
             <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
         </header>
 
@@ -168,9 +168,6 @@
             </div>
 
             <div class="card card-white">
-                <div>
-                    <h2>상품 판매·중개</h2>
-                    <div class="card card-white">
                 <div>
                     <h2>상품 판매·중개</h2>
                     <p>음식물처리기<br>자료 보기</p>
@@ -198,4 +195,3 @@
     </div>
 </body>
 </html>
-
