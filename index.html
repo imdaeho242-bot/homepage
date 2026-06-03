@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>휴 브릿지 비즈 365</title>
+    <title>휴 브릿지 비즈</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 
@@ -23,7 +23,7 @@
         /* 모바일 화면 컨테이너 (초록색 배경) */
         .mobile-container {
             width: 360px;
-            height: 780px;
+            height: 740px; /* 구도가 컴팩트해져서 세로 높이를 살짝 조절했습니다 */
             background: linear-gradient(180deg, #1A4731 0%, #296045 100%);
             border-radius: 20px;
             overflow-y: auto;
@@ -31,21 +31,21 @@
             flex-direction: column;
             padding: 40px 20px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            position: relative;
             box-sizing: border-box;
         }
 
         /* 상단 헤더 섹션 */
         .main-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .logo-text {
-            font-size: 28px; /* 글자수가 늘어나서 크기를 살짝 조절했습니다 */
+            font-size: 28px;
             font-weight: 700;
             color: #F8E3C0; /* 부드러운 골드 색상 */
             margin: 0;
+            letter-spacing: -0.5px;
         }
 
         .sub-text {
@@ -63,11 +63,11 @@
             flex-grow: 1;
         }
 
-        /* 개별 카드 기본 공통 스타일 */
+        /* 개별 카드 기본 공통 스타일 (아이콘이 빠져 여백과 정렬을 다시 잡았습니다) */
         .card {
             background-color: #fff;
             border-radius: 15px;
-            padding: 15px;
+            padding: 22px 15px; /* 세로 패딩을 늘려 균형을 잡았습니다 */
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -77,34 +77,20 @@
             box-sizing: border-box;
         }
 
-        /* 아이콘 박스 */
-        .icon-box {
-            width: 55px;
-            height: 55px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .icon-box img {
-            max-width: 100%;
-            height: auto;
-        }
-
         /* 카드 내 텍스트 스타일 */
         .card h2 {
-            font-size: 16px;
+            font-size: 18px; /* 글씨를 기존보다 살짝 키워 주목도를 높였습니다 */
             font-weight: 700;
-            color: #333;
-            margin: 0;
+            color: #111;
+            margin: 0 0 8px 0;
         }
 
         .card p {
-            font-size: 12px;
+            font-size: 13px;
             color: #666;
             line-height: 1.4;
-            margin: 8px 0 12px;
+            margin: 0 0 18px 0; /* 버튼과의 간격 확보 */
+            word-break: keep-all; /* 단어가 어색하게 깨지지 않도록 설정 */
         }
 
         /* 흰색 배경 카드 */
@@ -120,7 +106,7 @@
         /* 버튼 공통 스타일 */
         .btn {
             display: inline-block;
-            padding: 8px 10px;
+            padding: 10px 10px;
             font-size: 12px;
             font-weight: 700;
             text-decoration: none;
@@ -128,7 +114,7 @@
             width: 100%;
             box-sizing: border-box;
             transition: background-color 0.2s;
-            margin-bottom: 6px; /* 버튼이 여러개일 때 간격 */
+            margin-bottom: 8px;
         }
         
         .btn:last-child {
@@ -165,7 +151,7 @@
 
         /* 하단 링크 영역 */
         .footer-links {
-            margin-top: 30px;
+            margin-top: 35px;
             text-align: center;
         }
 
@@ -174,7 +160,7 @@
             font-size: 13px;
             color: #F4DFA8;
             text-decoration: none;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             opacity: 0.9;
         }
 
@@ -186,47 +172,38 @@
 <body>
     <div class="mobile-container">
         <header class="main-header">
-            <h1 class="logo-text">휴브릿지 비즈 링크</h1>
+            <h1 class="logo-text">휴 브릿지 비즈</h1>
             <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
         </header>
 
         <main class="content-grid">
             
             <div class="card card-white">
-                <div class="icon-box">
-                    <img src="icon_rental.png" alt="렌탈 아이콘">
-                </div>
-                <h2>사업·가정 렌탈</h2>
+                <h2>기업·가정 렌탈</h2>
                 <p>운영 및 생활 가전 지원</p>
                 
-                <a href="https://blog.naver.com/sora2220" class="btn btn-green">기업형 렌탈 바로가기</a>
-                <a href="http://withmoa.co.kr" class="btn btn-green">가전 렌탈 바로가기</a>
+                <a href="https://www.naver.com" class="btn btn-green" target="_blank">장비 렌탈 바로가기</a>
+                <a href="http://www.withmoa.co.kr" class="btn btn-green" target="_blank">생활가전 렌탈</a>
             </div>
 
             <div class="card card-white">
-                <div class="icon-box">
-                    <img src="icon_product_match.png" alt="상품 중개 아이콘">
-                </div>
-                <h2>상품 중개</h2>
-                <p>업소용 음식물쓸게 처리기<br>연결 상담</p>
+                <h2>상품 판매.중개</h2>
+                <p>음식물처리기<br>자료 보기</p>
                 
-                <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" class="btn btn-dark">상품중개 바로가기</a>
+                <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" class="btn btn-dark" target="_blank">상품중개 바로가기</a>
             </div>
 
             <div class="card card-beige" style="grid-column: span 2;">
-                <div class="icon-box">
-                    <img src="icon_beauty.png" alt="미용 아이콘">
-                </div>
                 <h2>미용재료</h2>
-                <p>미용재료 및 클리닉 제품</p>
+                <p>최상의 미용재료 및 클리닉 제품 공급</p>
                 
-                <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold">미용재료 바로가기</a>
+                <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold" target="_blank">미용재료 바로가기</a>
             </div>
         </main>
 
         <footer class="footer-links">
-            <a href="https://blog.naver.com/haeyoung924">햇빛 노인재가센터 바로가기</a>
-            <a href="https://m.blog.naver.com/tmdgusdk119">(주)천리환경 바로가기</a>
+            <a href="https://www.naver.com" target="_blank">햇빛 노인재가센터 바로가기</a>
+            <a href="https://www.daum.net" target="_blank">(주)천리환경 바로가기</a>
         </footer>
     </div>
 </body>
