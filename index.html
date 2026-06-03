@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비즈링크 365</title>
+    <title>휴 브릿지 비즈 365</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 
@@ -12,26 +12,27 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Noto Sans KR', sans-serif; /* 현대적인 고딕 폰트 적용 */
-            background-color: #f4f4f4; /* 부드러운 배경색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        /* 모바일 화면 컨테이너 (그림의 녹색 배경 부분) */
+        /* 모바일 화면 컨테이너 (초록색 배경) */
         .mobile-container {
-            width: 360px; /* 일반적인 모바일 가로폭 */
-            height: 780px; /* 세로폭 설정 */
-            background: linear-gradient(180deg, #1A4731 0%, #296045 100%); /* 그라데이션 배경 */
-            border-radius: 20px; /* 둥근 모서리 */
-            overflow-y: auto; /* 내용이 많을 때 스크롤 */
+            width: 360px;
+            height: 780px;
+            background: linear-gradient(180deg, #1A4731 0%, #296045 100%);
+            border-radius: 20px;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             padding: 40px 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 미세한 그림자 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             position: relative;
+            box-sizing: border-box;
         }
 
         /* 상단 헤더 섹션 */
@@ -41,7 +42,7 @@
         }
 
         .logo-text {
-            font-size: 32px;
+            font-size: 28px; /* 글자수가 늘어나서 크기를 살짝 조절했습니다 */
             font-weight: 700;
             color: #F8E3C0; /* 부드러운 골드 색상 */
             margin: 0;
@@ -58,28 +59,29 @@
         .content-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2열 구조 */
-            gap: 15px; /* 카드 간 간격 */
-            flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+            gap: 15px;
+            flex-grow: 1;
         }
 
         /* 개별 카드 기본 공통 스타일 */
         .card {
             background-color: #fff;
-            border-radius: 15px; /* 더 둥근 모서리 */
-            padding: 20px;
+            border-radius: 15px;
+            padding: 15px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 카드 그림자 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
 
         /* 아이콘 박스 */
         .icon-box {
-            width: 70px;
-            height: 70px;
-            margin-bottom: 15px;
+            width: 55px;
+            height: 55px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -92,17 +94,17 @@
 
         /* 카드 내 텍스트 스타일 */
         .card h2 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #333;
             margin: 0;
         }
 
         .card p {
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
             line-height: 1.4;
-            margin: 10px 0 15px;
+            margin: 8px 0 12px;
         }
 
         /* 흰색 배경 카드 */
@@ -118,14 +120,19 @@
         /* 버튼 공통 스타일 */
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 14px;
+            padding: 8px 10px;
+            font-size: 12px;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 20px; /* 둥근 버튼 */
+            border-radius: 20px;
             width: 100%;
-            box-sizing: border-box; /* 패딩 포함 크기 계산 */
-            transition: background-color 0.2s; /* 호버 효과 */
+            box-sizing: border-box;
+            transition: background-color 0.2s;
+            margin-bottom: 6px; /* 버튼이 여러개일 때 간격 */
+        }
+        
+        .btn:last-child {
+            margin-bottom: 0;
         }
 
         /* 버튼 색상별 스타일 */
@@ -148,7 +155,7 @@
         }
 
         .btn-gold {
-            background-color: #C0955B; /* 차분한 골드 색상 */
+            background-color: #C0955B;
             color: #fff;
         }
 
@@ -165,7 +172,7 @@
         .footer-links a {
             display: block;
             font-size: 13px;
-            color: #F4DFA8; /* 흐릿한 골드 색상 */
+            color: #F4DFA8;
             text-decoration: none;
             margin-bottom: 8px;
             opacity: 0.9;
@@ -179,18 +186,21 @@
 <body>
     <div class="mobile-container">
         <header class="main-header">
-            <h1 class="logo-text">비즈링크 365</h1>
+            <h1 class="logo-text">휴브릿지 비즈 링크</h1>
             <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
         </header>
 
         <main class="content-grid">
+            
             <div class="card card-white">
                 <div class="icon-box">
                     <img src="icon_rental.png" alt="렌탈 아이콘">
                 </div>
-                <h2>기업·가정 렌탈</h2>
-                <p>기업, 생활가전<br>운영 지원</p>
-                <a href="#" class="btn btn-green">렌탈 바로가기</a>
+                <h2>사업·가정 렌탈</h2>
+                <p>운영 및 생활 가전 지원</p>
+                
+                <a href="https://blog.naver.com/sora2220" class="btn btn-green">기업형 렌탈 바로가기</a>
+                <a href="http://withmoa.co.kr" class="btn btn-green">가전 렌탈 바로가기</a>
             </div>
 
             <div class="card card-white">
@@ -198,8 +208,9 @@
                     <img src="icon_product_match.png" alt="상품 중개 아이콘">
                 </div>
                 <h2>상품 중개</h2>
-                <p>필요한 상품<br>연결 상담</p>
-                <a href="#" class="btn btn-dark">상품중개 바로가기</a>
+                <p>업소용 음식물쓸게 처리기<br>연결 상담</p>
+                
+                <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" class="btn btn-dark">상품중개 바로가기</a>
             </div>
 
             <div class="card card-beige" style="grid-column: span 2;">
@@ -208,13 +219,14 @@
                 </div>
                 <h2>미용재료</h2>
                 <p>미용재료 및 클리닉 제품</p>
-                <a href="#" class="btn btn-gold">미용재료 바로가기</a>
+                
+                <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold">미용재료 바로가기</a>
             </div>
         </main>
 
         <footer class="footer-links">
-            <a href="#">햇빛 노인재가센터 바로가기</a>
-            <a href="#">천리환경 바로가기</a>
+            <a href="https://blog.naver.com/haeyoung924">햇빛 노인재가센터 바로가기</a>
+            <a href="https://m.blog.naver.com/tmdgusdk119">(주)천리환경 바로가기</a>
         </footer>
     </div>
 </body>
