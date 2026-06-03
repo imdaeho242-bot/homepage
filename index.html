@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>휴 브릿지 비즈</title>
+    <title>휴 브릿지 비즈 365</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 
@@ -23,10 +23,10 @@
         /* 모바일 화면 컨테이너 (초록색 배경) */
         .mobile-container {
             width: 360px;
-            height: 740px; /* 구도가 컴팩트해져서 세로 높이를 살짝 조절했습니다 */
+            height: auto;
+            min-height: 740px;
             background: linear-gradient(180deg, #1A4731 0%, #296045 100%);
             border-radius: 20px;
-            overflow-y: auto;
             display: flex;
             flex-direction: column;
             padding: 40px 20px;
@@ -43,7 +43,7 @@
         .logo-text {
             font-size: 28px;
             font-weight: 700;
-            color: #F8E3C0; /* 부드러운 골드 색상 */
+            color: #F8E3C0;
             margin: 0;
             letter-spacing: -0.5px;
         }
@@ -55,104 +55,82 @@
             margin: 10px 0 0;
         }
 
-        /* 카드 그리드 영역 */
+        /* 카드 그리드 영역 (좌우 2열 구조 고정) */
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2열 구조 */
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            flex-grow: 1;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        /* 개별 카드 기본 공통 스타일 (아이콘이 빠져 여백과 정렬을 다시 잡았습니다) */
+        /* 개별 카드 스타일 */
         .card {
             background-color: #fff;
             border-radius: 15px;
-            padding: 22px 15px; /* 세로 패딩을 늘려 균형을 잡았습니다 */
+            padding: 20px 12px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             box-sizing: border-box;
+            min-height: 200px;
         }
 
-        /* 카드 내 텍스트 스타일 */
+        /* 미용재료 카드 (밑바닥에 가로로 길게 깔아주는 스타일) */
+        .card-full {
+            grid-column: span 2;
+            min-height: 140px;
+        }
+
         .card h2 {
-            font-size: 18px; /* 글씨를 기존보다 살짝 키워 주목도를 높였습니다 */
+            font-size: 17px;
             font-weight: 700;
             color: #111;
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
         }
 
         .card p {
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
             line-height: 1.4;
-            margin: 0 0 18px 0; /* 버튼과의 간격 확보 */
-            word-break: keep-all; /* 단어가 어색하게 깨지지 않도록 설정 */
+            margin: 0 0 12px 0;
+            word-break: keep-all;
         }
 
-        /* 흰색 배경 카드 */
-        .card-white {
-            background-color: #fff;
-        }
+        .card-white { background-color: #fff; }
+        .card-beige { background-color: #FBF7EC; }
 
-        /* 연한 베이지 배경 카드 (미용재료) */
-        .card-beige {
-            background-color: #FBF7EC;
-        }
-
-        /* 버튼 공통 스타일 */
+        /* 버튼 스타일 */
         .btn {
-            display: inline-block;
-            padding: 10px 10px;
-            font-size: 12px;
+            display: block;
+            padding: 10px 5px;
+            font-size: 11.5px;
             font-weight: 700;
             text-decoration: none;
             border-radius: 20px;
             width: 100%;
             box-sizing: border-box;
-            transition: background-color 0.2s;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            text-align: center;
         }
         
         .btn:last-child {
             margin-bottom: 0;
         }
 
-        /* 버튼 색상별 스타일 */
-        .btn-green {
-            background-color: #1A4731;
-            color: #fff;
-        }
-
-        .btn-green:hover {
-            background-color: #296045;
-        }
-
-        .btn-dark {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .btn-dark:hover {
-            background-color: #555;
-        }
-
-        .btn-gold {
-            background-color: #C0955B;
-            color: #fff;
-        }
-
-        .btn-gold:hover {
-            background-color: #D3AB75;
-        }
+        .btn-green { background-color: #1A4731; color: #fff; }
+        .btn-dark { background-color: #333; color: #fff; }
+        .btn-gold { background-color: #C0955B; color: #fff; }
 
         /* 하단 링크 영역 */
         .footer-links {
-            margin-top: 35px;
+            margin-top: auto;
+            padding-top: 35px;
             text-align: center;
+            width: 100%;
         }
 
         .footer-links a {
@@ -160,7 +138,7 @@
             font-size: 13px;
             color: #F4DFA8;
             text-decoration: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             opacity: 0.9;
         }
 
@@ -172,38 +150,52 @@
 <body>
     <div class="mobile-container">
         <header class="main-header">
-            <h1 class="logo-text">휴 브릿지 비즈</h1>
+            <h1 class="logo-text">휴 브릿지 비즈24</h1>
             <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
         </header>
 
         <main class="content-grid">
             
             <div class="card card-white">
-                <h2>기업·가정 렌탈</h2>
-                <p>운영 및 생활 가전 지원</p>
-                
-                <a href="https://blog.naver.com/sora2220" class="btn btn-green" target="_blank">장비렌탈 바로가기</a>
-                <a href="http://www.withmoa.co.kr" class="btn btn-green" target="_blank">생활가전 렌탈</a>
+                <div>
+                    <h2>기업·가정 렌탈</h2>
+                    <p>운영 및 생활 가전 지원</p>
+                </div>
+                <div style="width: 100%;">
+                    <a href="https://blog.naver.com/sora2220" class="btn btn-green" target="_blank">장비렌탈 바로가기</a>
+                    <a href="http://www.withmoa.co.kr" class="btn btn-green" target="_blank">생활가전 렌탈</a>
+                </div>
             </div>
 
             <div class="card card-white">
-                <h2>상품 판매.중개</h2>
-                <p>음식물처리기<br>자료 보기</p>
-                
-                <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" class="btn btn-dark" target="_blank">상품중개 바로가기</a>
-       
-            <div class="card card-beige" style="grid-column: span 2;">
-                <h2>미용재료</h2>
-                <p>최상의 미용재료 및 클리닉 제품 공급</p>
-                
-                <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold" target="_blank">미용재료 바로가기</a>
+                <div>
+                    <h2>상품 판매·중개</h2>
+                    <div class="card card-white">
+                <div>
+                    <h2>상품 판매·중개</h2>
+                    <p>음식물처리기<br>자료 보기</p>
+                </div>
+                <div style="width: 100%;">
+                    <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDMzNjUvMTMxTzA2Njk2MDI2Mjc4MjAzNzU1OTM5MTgyODE5NDM4NjM4NjI1OTYzMDIy" class="btn btn-dark" target="_blank">상품중개 바로가기</a>
+                </div>
+            </div>
+
+            <div class="card card-beige card-full">
+                <div>
+                    <h2>미용재료</h2>
+                    <p>최상의 미용재료 및 클리닉 제품 공급</p>
+                </div>
+                <div style="width: 100%;">
+                    <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold" target="_blank">미용재료 바로가기</a>
+                </div>
             </div>
         </main>
 
         <footer class="footer-links">
             <a href="https://blog.naver.com/haeyoung924" target="_blank">햇빛 노인재가센터 바로가기</a>
-            <a href="https://blog.naver.com/tmdgusdk119" target="_blank">(주)천리환경 바로가기</a>                                                                                                                                                                                                                                                                                                                                                                                              " target="_blank">(주)천리환경 바로가기</a>
+            <a href="https://blog.naver.com/tmdgusdk119" target="_blank">(주)천리환경 바로가기</a>
         </footer>
     </div>
 </body>
 </html>
+
