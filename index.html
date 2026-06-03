@@ -4,181 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비즈링크 365</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* 1. 전체 배경 및 기본 세팅 */
+        /* 기본 스타일 초기화 */
         body {
             margin: 0;
-            padding: 20px 10px;
-            background-color: #0d3b26; /* 이미지의 짙은 그린 배경색 */
-            font-family: 'Malgun Gothic', dotum, sans-serif;
-            box-sizing: border-box;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif; /* 현대적인 고딕 폰트 적용 */
+            background-color: #f4f4f4; /* 부드러운 배경색 */
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* 2. 전체를 감싸는 컨테이너 */
-        .container {
-            width: 100%;
-            max-width: 450px; /* 모바일 화면에 최적화된 너비 */
+        /* 모바일 화면 컨테이너 (그림의 녹색 배경 부분) */
+        .mobile-container {
+            width: 360px; /* 일반적인 모바일 가로폭 */
+            height: 780px; /* 세로폭 설정 */
+            background: linear-gradient(180deg, #1A4731 0%, #296045 100%); /* 그라데이션 배경 */
+            border-radius: 20px; /* 둥근 모서리 */
+            overflow-y: auto; /* 내용이 많을 때 스크롤 */
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 미세한 그림자 */
+            position: relative;
+        }
+
+        /* 상단 헤더 섹션 */
+        .main-header {
             text-align: center;
-        }
-
-        /* 3. 메인 및 서브 타이틀 영역 */
-        .header-title {
-            color: #f3c477; /* 금빛/황토색 타이틀 */
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-        .header-sub {
-            color: #ffffff;
-            font-size: 14px;
-            opacity: 0.9;
             margin-bottom: 30px;
         }
 
-        /* 4. 상단 2열 카드를 배치하는 그리드 */
-        .grid-2col {
+        .logo-text {
+            font-size: 32px;
+            font-weight: 700;
+            color: #F8E3C0; /* 부드러운 골드 색상 */
+            margin: 0;
+        }
+
+        .sub-text {
+            font-size: 14px;
+            color: #fff;
+            opacity: 0.8;
+            margin: 10px 0 0;
+        }
+
+        /* 카드 그리드 영역 */
+        .content-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 12px;
+            grid-template-columns: repeat(2, 1fr); /* 2열 구조 */
+            gap: 15px; /* 카드 간 간격 */
+            flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
         }
 
-        /* 5. 공통 카드 스타일 (둥근 모서리) */
+        /* 개별 카드 기본 공통 스타일 */
         .card {
-            background-color: #ffffff;
-            border-radius: 30px;
-            padding: 25px 12px;
+            background-color: #fff;
+            border-radius: 15px; /* 더 둥근 모서리 */
+            padding: 20px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 카드 그림자 */
         }
 
-        /* 6. 하단 미용재료 전용 와이드 카드 스타일 */
-        .card-wide {
-            background: linear-gradient(to bottom, #fffde9, #f5e4ab); /* 은은한 노란색 그라데이션 */
-            border-radius: 30px;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin-bottom: 20px;
-        }
-
-        /* 7. 카드 제목 및 설명 텍스트 */
-        .card-title {
-            color: #000000;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .card-wide .card-title {
-            font-size: 22px;
-        }
-        .card-desc {
-            color: #555555;
-            font-size: 13px;
-            line-height: 1.4;
+        /* 아이콘 박스 */
+        .icon-box {
+            width: 70px;
+            height: 70px;
             margin-bottom: 15px;
-            min-height: 36px;
-        }
-
-        /* 8. 버튼 그룹 및 버튼 공통 스타일 */
-        .btn-group {
             display: flex;
-            flex-direction: column;
-            gap: 6px; /* 버튼 사이의 간격 */
-            width: 100%;
+            justify-content: center;
             align-items: center;
         }
+
+        .icon-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 카드 내 텍스트 스타일 */
+        .card h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+            margin: 10px 0 15px;
+        }
+
+        /* 흰색 배경 카드 */
+        .card-white {
+            background-color: #fff;
+        }
+
+        /* 연한 베이지 배경 카드 (미용재료) */
+        .card-beige {
+            background-color: #FBF7EC;
+        }
+
+        /* 버튼 공통 스타일 */
         .btn {
             display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 700;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 9px 15px;
-            border-radius: 20px;
-            color: #ffffff;
-            width: 85%;
-            text-align: center;
-            transition: background 0.2s;
-            box-sizing: border-box;
-        }
-
-        /* 9. 버튼 색상 정의 */
-        .btn-green { background-color: #24523b; }
-        .btn-lightgreen { background-color: #3a7d5c; } /* 가전 렌탈 전용 연한 그린 */
-        .btn-dark { background-color: #333333; }
-        .btn-yellow { background-color: #b38900; }
-        .btn:hover { opacity: 0.9; }
-
-        /* 10. 최하단 소형 링크 영역 스타일 */
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+            border-radius: 20px; /* 둥근 버튼 */
             width: 100%;
+            box-sizing: border-box; /* 패딩 포함 크기 계산 */
+            transition: background-color 0.2s; /* 호버 효과 */
         }
-        .footer-btn {
-            display: inline-block;
+
+        /* 버튼 색상별 스타일 */
+        .btn-green {
+            background-color: #1A4731;
+            color: #fff;
+        }
+
+        .btn-green:hover {
+            background-color: #296045;
+        }
+
+        .btn-dark {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btn-dark:hover {
+            background-color: #555;
+        }
+
+        .btn-gold {
+            background-color: #C0955B; /* 차분한 골드 색상 */
+            color: #fff;
+        }
+
+        .btn-gold:hover {
+            background-color: #D3AB75;
+        }
+
+        /* 하단 링크 영역 */
+        .footer-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: 13px;
+            color: #F4DFA8; /* 흐릿한 골드 색상 */
             text-decoration: none;
-            font-size: 11px; /* 작고 앙증맞은 크기 */
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4); /* 은은한 흰색 테두리 */
-            padding: 6px 12px;
-            border-radius: 6px;
-            background-color: rgba(255, 255, 255, 0.05);
-            transition: background 0.2s;
-            box-sizing: border-box;
+            margin-bottom: 8px;
+            opacity: 0.9;
         }
-        .footer-btn:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="mobile-container">
+        <header class="main-header">
+            <h1 class="logo-text">비즈링크 365</h1>
+            <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
+        </header>
 
-<div class="container">
-    <div class="header-title">비즈링크 365</div>
-    <div class="header-sub">미용재료 · 기업/가정 렌탈 · 상품중개</div>
-
-    <div class="grid-2col">
-        <div class="card">
-            <div class="card-title">기업·가정 렌탈</div>
-            <div class="card-desc">기업, 생활가전<br>운영 지원</div>
-            <div class="btn-group">
-                <a href="https://blog.naver.com/sora2220" class="btn btn-green">렌탈 바로가기</a>
-                <a href="http://withmoa.co.kr" class="btn btn-lightgreen">가전 렌탈 바로가기</a>
+        <main class="content-grid">
+            <div class="card card-white">
+                <div class="icon-box">
+                    <img src="icon_rental.png" alt="렌탈 아이콘">
+                </div>
+                <h2>기업·가정 렌탈</h2>
+                <p>기업, 생활가전<br>운영 지원</p>
+                <a href="#" class="btn btn-green">렌탈 바로가기</a>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-title">상품 중개</div>
-            <div class="card-desc">필요한 상품<br>연결 상담</div>
-            <div class="btn-group">
-                <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDN8MzQ3MjU5OTE5OTgyMDY5MzU2OHxGfDA?shareKey=QP5RlW0dAPNb6P3t_aE9qZO00KyCMwGoX5lTFefQpa45jISR6XeU-08UhhpnJ9DuVin0Ri-KQ3FUcArELzN9lQI%3D" class="btn btn-dark" style="width: 90%; padding: 12px 15px;">상품중개 바로가기</a>
+            <div class="card card-white">
+                <div class="icon-box">
+                    <img src="icon_product_match.png" alt="상품 중개 아이콘">
+                </div>
+                <h2>상품 중개</h2>
+                <p>필요한 상품<br>연결 상담</p>
+                <a href="#" class="btn btn-dark">상품중개 바로가기</a>
             </div>
-        </div>
-    </div>
 
-    <div class="card-wide">
-        <div class="card-title">미용재료</div>
-        <div class="card-desc">미용재료 및<br>클리닉 제품</div>
-        <a href="https://blog.naver.com/dlaeogh3" class="btn btn-yellow" style="width: auto; padding: 10px 30px; font-size: 13px;">미용재료 바로가기</a>
-    </div>
+            <div class="card card-beige" style="grid-column: span 2;">
+                <div class="icon-box">
+                    <img src="icon_beauty.png" alt="미용 아이콘">
+                </div>
+                <h2>미용재료</h2>
+                <p>미용재료 및 클리닉 제품</p>
+                <a href="#" class="btn btn-gold">미용재료 바로가기</a>
+            </div>
+        </main>
 
-    <div class="footer-links">
-        <a href="https://blog.naver.com/haeyoung924" class="footer-btn">햇빛 노인재가센터 바로가기</a>
-        <a href="https://m.blog.naver.com/tmdgusdk119" class="footer-btn">천리환경 바로가기</a>
+        <footer class="footer-links">
+            <a href="#">햇빛 노인재가센터 바로가기</a>
+            <a href="#">천리환경 바로가기</a>
+        </footer>
     </div>
-</div>
-
 </body>
 </html>
