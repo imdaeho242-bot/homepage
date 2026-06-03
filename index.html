@@ -1,160 +1,203 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>휴브릿지 비즈니스 플랫폼</title>
-  <meta name="description" content="렌탈, 미용재료, 상품중개, 사업자금 상담 플랫폼">
+<title>휴브릿지 비즈니스 플랫폼</title>
 
-  <meta property="og:title" content="휴브릿지 비즈니스 플랫폼">
-  <meta property="og:description" content="렌탈, 미용재료, 상품중개, 사업자금 상담 플랫폼">
-  <meta property="og:url" content="https://imdaeho242-bot.github.io/homepage/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="휴브릿지 비즈니스 플랫폼">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, 'Noto Sans KR', sans-serif;
-      background: #111827;
-      color: #ffffff;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Pretendard',sans-serif;
+}
 
-    .container {
-      width: 100%;
-      min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+body{
+background:#07132d;
+padding:30px 15px;
+color:#fff;
+}
 
-    .title {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #ffffff;
-    }
+.container{
+max-width:900px;
+margin:auto;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      width: 100%;
-      max-width: 420px;
-    }
+h1{
+text-align:center;
+font-size:42px;
+font-weight:800;
+margin-bottom:50px;
+}
 
-    .card {
-      background: #f4d7d7;
-      color: #111827;
-      border-radius: 18px;
-      padding: 22px 14px;
-      text-align: center;
-      min-height: 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    }
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:20px;
+}
 
-    .card.wide {
-      grid-column: span 2;
-      background: #e9b88f;
-    }
+.card{
+background:#ecd9d9;
+border-radius:30px;
+padding:30px 20px;
+text-align:center;
+color:#111827;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
 
-    .card h2 {
-      margin: 0 0 10px;
-      font-size: 19px;
-      font-weight: 800;
-    }
+.card h2{
+font-size:34px;
+margin-bottom:20px;
+}
 
-    .card p {
-      margin: 0 0 14px;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #333;
-    }
+.card p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:30px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 9px 16px;
-      background: #111827;
-      color: #ffffff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      margin-top: 6px;
-    }
+.btn{
+display:inline-block;
+background:#06153b;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+font-size:24px;
+font-weight:700;
+text-decoration:none;
+}
 
-    .phone {
-      margin-top: 28px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #ffffff;
-      text-align: center;
-    }
+.wide{
+background:#e2b68f;
+padding:40px;
+border-radius:30px;
+text-align:center;
+margin-top:10px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
 
-    @media (max-width: 420px) {
-      .container {
-        padding: 30px 16px;
-      }
+.wide h2{
+font-size:42px;
+color:#111827;
+margin-bottom:20px;
+}
 
-      .title {
-        font-size: 24px;
-      }
+.wide p{
+font-size:26px;
+line-height:1.7;
+color:#333;
+margin-bottom:30px;
+}
 
-      .card {
-        padding: 20px 12px;
-        min-height: 140px;
-      }
+.footer{
+text-align:center;
+margin-top:50px;
+}
 
-      .card h2 {
-        font-size: 17px;
-      }
+.footer h2{
+font-size:54px;
+font-weight:800;
+}
 
-      .card p {
-        font-size: 13px;
-      }
-    }
-  </style>
+@media(max-width:768px){
+
+h1{
+font-size:28px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card h2{
+font-size:26px;
+}
+
+.card p{
+font-size:18px;
+}
+
+.btn{
+font-size:18px;
+padding:15px 30px;
+}
+
+.wide h2{
+font-size:30px;
+}
+
+.wide p{
+font-size:18px;
+}
+
+.footer h2{
+font-size:32px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="title">휴브릿지 비즈니스 플랫폼</div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>기업가형 병원</h2>
-        <p>병원 운영 자금<br>렌탈 상담 안내</p>
-        <a class="btn" href="tel:010-6451-9115">전화 상담 바로가기</a>
-      </div>
+<div class="container">
 
-      <div class="card">
-        <h2>제조소형 창업</h2>
-        <p>창업 자금<br>상품 중개 상담</p>
-        <a class="btn" href="tel:010-6451-9115">비즈니스 상담</a>
-      </div>
+<h1>휴브릿지 비즈니스 플랫폼</h1>
 
-      <div class="card wide">
-        <h2>미용재료</h2>
-        <p>미용재료 및<br>클리닉 제품 상담</p>
-        <a class="btn" href="tel:010-6451-9115">미용재료 바로가기</a>
-      </div>
-    </div>
+<div class="grid">
 
-    <div class="phone">
-      상담 문의 010-6451-9115
-    </div>
-  </div>
+<div class="card">
+<h2>기업가형 병원</h2>
+<p>
+병원 운영 자금<br>
+렌탈 상담 안내
+</p>
+
+<a href="tel:01064519115" class="btn">
+전화 상담 바로가기
+</a>
+</div>
+
+<div class="card">
+<h2>제조소형 창업</h2>
+<p>
+창업 자금<br>
+상품 중개 상담
+</p>
+
+<a href="https://blog.naver.com/" class="btn">
+비즈니스 상담
+</a>
+</div>
+
+</div>
+
+<div class="wide">
+
+<h2>미용재료</h2>
+
+<p>
+미용재료 및<br>
+클리닉 제품 상담
+</p>
+
+<a href="#" class="btn">
+미용재료 바로가기
+</a>
+
+</div>
+
+<div class="footer">
+<h2>상담 문의 010-6451-9115</h2>
+</div>
+
+</div>
+
 </body>
 </html>
