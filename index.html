@@ -1,97 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-        <title>휴브릿지 비즈 24</title>
-    </head>
-<body>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
+<style>
+  /* 1. 배경 화면 설정 및 밝기 보정 */
   body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* 1. 배경 화면 전체 바꾸기 및 밝기 조절 */
+    /* 풍경 이미지를 배경으로 깔고 전체 화면에 꽉 차게 설정 */
     background-image: url('bg-river.png'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    /* 어두운 곳을 밝게 하고 화질을 선명하게 보정 (밝기 120%, 대비 110%) */
     backdrop-filter: brightness(1.2) contrast(1.1);
     -webkit-backdrop-filter: brightness(1.2) contrast(1.1);
+    
+    /* 화면 중앙 정렬 */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* 2. 모바일 화면 안에서 네모난 상자 꽉 차게 키우기 */
+  /* 2. 모바일 화면에서 네모난 상자 꽉 차게 키우기 */
   .container, .main-card, div[style*="margin"] { 
-    width: 100% !important;
-    max-width: 480px;
-    height: 100vh !important;
+    width: 100% !important; /* 가로 너비 꽉 채움 */
+    height: 100vh !important; /* 스마트폰 높이에 딱 맞춤 */
+    max-width: 480px; /* PC에서 너무 퍼지지 않게 잡아주는 마지노선 */
     box-sizing: border-box;
-    margin: 0 !important;
-    border-radius: 0 !important;
+    margin: 0 !important; /* 외부 여백 제거 */
+    border-radius: 0 !important; /* 화면에 꽉 찰 때는 모서리 둥근 것을 펴줌 */
+    
+    /* 내부 내용들이 잘 보이도록 정렬 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: auto;
+    overflow-y: auto; /* 내용이 길어지면 스크롤 가능하게 */
+    background-color: rgba(0, 128, 0, 0.9); /* 기존 초록색 배경 유지 및 투명도 조절 */
   }
 
+  /* 3. 상자 안의 이미지들도 가로로 꽉 차게 조절 */
   img {
     width: 100% !important;
     height: auto !important;
   }
 </style>
- 
-</head>
-<body>
-    <div class="mobile-container">
-        <header class="main-header">
-            <h1 class="logo-text">휴브릿지 비즈 24</h1>
-            <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
-        </header>
-
-        <main class="content-grid">
-            
-            <div class="card card-white">
-                <div>
-                    <h2>기업·가정 렌탈</h2>
-                    <p>운영 및 생활 가전 지원</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/sora2220" class="btn btn-green" target="_blank">장비렌탈 바로가기</a>
-                    <a href="http://www.withmoa.co.kr" class="btn btn-green" target="_blank">생활가전 렌탈</a>
-                </div>
-            </div>
-
-          <div class="card card-white">
-    <div>
-        <h2>상품판매·중개</h2>
-        <p>음식물처리기<br>자료 보기</p>
-    </div>
-    <div style="width: 100%;">
-        <a href="https://www.제로스톤.com" class="btn btn-gold" target="_blank">상품중개 바로가기</a>
-    </div>
-</div>
- 
-
-            <div class="card card-beige card-full">
-                <div>
-                    <h2>미용재료</h2>
-                    <p>미용재료 및 클리닉 제품 공급</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold" target="_blank">미용재료 바로가기</a>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer-links">
-            <a href="https://blog.naver.com/haeyoung924" target="_blank">햇빛 노인재가센터 바로가기</a>
-            <a href="https://blog.naver.com/tmdgusdk119" target="_blank">(주)천리환경 바로가기</a>
-        </footer>
-    </div>
-</body>
-</html>
