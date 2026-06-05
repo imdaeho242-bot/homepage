@@ -4,16 +4,17 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* 풍경 이미지를 배경으로 깔고 전체 화면에 꽉 차게 설정 */
-    background-image: url('bg-river.png'); 
+    
+    /* 파일 이름 대신 인터넷에 등록된 이미지 주소로 직접 연결했습니다 */
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* 어두운 곳을 밝게 하고 화질을 선명하게 보정 (밝기 120%, 대비 110%) */
+    
+    /* 어두운 곳을 화사하고 밝게 보정 */
     backdrop-filter: brightness(1.2) contrast(1.1);
     -webkit-backdrop-filter: brightness(1.2) contrast(1.1);
     
-    /* 화면 중앙 정렬 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,22 +22,21 @@
 
   /* 2. 모바일 화면에서 네모난 상자 꽉 차게 키우기 */
   .container, .main-card, div[style*="margin"] { 
-    width: 100% !important; /* 가로 너비 꽉 채움 */
-    height: 100vh !important; /* 스마트폰 높이에 딱 맞춤 */
-    max-width: 480px; /* PC에서 너무 퍼지지 않게 잡아주는 마지노선 */
+    width: 100% !important; 
+    height: 100vh !important; 
+    max-width: 480px; 
     box-sizing: border-box;
-    margin: 0 !important; /* 외부 여백 제거 */
-    border-radius: 0 !important; /* 화면에 꽉 찰 때는 모서리 둥근 것을 펴줌 */
+    margin: 0 !important; 
+    border-radius: 0 !important; 
     
-    /* 내부 내용들이 잘 보이도록 정렬 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: auto; /* 내용이 길어지면 스크롤 가능하게 */
-    background-color: rgba(0, 128, 0, 0.9); /* 기존 초록색 배경 유지 및 투명도 조절 */
+    overflow-y: auto; 
+    background-color: rgba(0, 128, 0, 0.85); /* 기존 초록색 배경 유지 */
   }
 
-  /* 3. 상자 안의 이미지들도 가로로 꽉 차게 조절 */
+  /* 3. 내부 이미지 가로 꽉 채우기 */
   img {
     width: 100% !important;
     height: auto !important;
