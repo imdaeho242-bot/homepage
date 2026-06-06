@@ -1,201 +1,150 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>휴브릿지 비즈 24</title>
-    <style>
-        /* 기본 스타일 리셋 및 배경 설정 */
-        body {
-            margin: 0;
-            padding: 20px 10px;
-            background-color: #f5f5f5;
-            font-family: 'Malgun Gothic', sans-serif;
-            display: flex;
-            justify-content: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미용재료 및 패밀리사이트</title>
+  
+  <style>
+    /* 전체 배경 및 기본 설정 */
+    body {
+      background-color: #222222; /* 전체 화면 배경 (어두운 색상 예시) */
+      margin: 0;
+      padding: 20px;
+      font-family: 'Malgun Gothic', sans-serif;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-            background-color: #14472b; /* 메인 초록색 배경 */
-            border-radius: 30px;
-            padding: 40px 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
+    /* 1. 전체 카드들을 감싸는 메인 컨테이너 (세로로 길쭉하게 배치) */
+    .main-card-container {
+      display: block;
+      width: 100%;
+      max-width: 450px; /* 카드 전체 너비 제한 */
+      margin: 0 auto;   /* 화면 가운데 정렬 */
+      box-sizing: border-box;
+    }
 
-        /* 상단 타이틀 부 */
-        .header h1 {
-            color: #f7e178;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-        .header .sub-menu {
-            color: #b2c9bb;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        .header .welcome {
-            color: #ffffff;
-            font-size: 13px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+    /* 2. 상단 기본 카드 디자인 (살구색 배경) */
+    .main-card-container .info-card {
+      background-color: #f5e6dc; /* 화면과 유사한 살구색 배경 */
+      border-radius: 20px;       /* 모서리를 둥글게 */
+      padding: 24px;
+      margin-bottom: 20px;       /* 카드와 카드 사이의 세로 간격 */
+      text-align: center;
+      box-sizing: border-box;
+    }
 
-        /* 메인 그리드 레이아웃 (2열 구성) */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
+    .main-card-container .info-card h3 {
+      font-size: 18px;
+      color: #333333;
+      margin: 0 0 8px 0;
+      font-weight: bold;
+    }
 
-        /* 공통 화이트 카드 박스 */
-        .card {
-            background-color: #ffffff;
-            border-radius: 20px;
-            padding: 20px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 220px;
-            box-sizing: border-box;
-        }
+    .main-card-container .info-card p {
+      font-size: 13px;
+      color: #666666;
+      margin: 0 0 16px 0;
+    }
 
-        .card h2 {
-            font-size: 16px;
-            color: #111111;
-            margin: 0 0 5px 0;
-            font-weight: bold;
-        }
+    /* 상단 카드 내부의 타원형 어두운 버튼 */
+    .main-card-container .btn-dark-standard {
+      display: block;
+      background-color: #3a3532; /* 진한 브라운/블랙 배경색 */
+      color: #ffffff;            /* 하얀 글자 */
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 25px;       /* 양 끝이 둥근 모형 */
+      margin-bottom: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .main-card-container .btn-dark-standard:last-child {
+      margin-bottom: 0;
+    }
 
-        .card p {
-            font-size: 12px;
-            color: #666666;
-            margin: 0 0 15px 0;
-            line-height: 1.4;
-        }
 
-        /* 공통 버튼 스타일 */
-        .btn {
-            width: 90%;
-            display: block;
-            text-decoration: none;
-            padding: 10px 0;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 25px;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-        .btn:last-child {
-            margin-bottom: 0;
-        }
+    /* ===================================================
+       🔥 [수정 핵심] 패밀리 사이트 영역 디자인
+       =================================================== */
+    
+    /* 패밀리 사이트 전체 구역 (미용재료 카드 바로 밑에 배치됨) */
+    .main-card-container .family-site-section {
+      width: 100%;
+      margin-top: 25px;   /* 미용재료 카드와의 간격 */
+      text-align: left;   /* 패밀리 사이트 타이틀은 왼쪽 정렬 */
+      box-sizing: border-box;
+    }
 
-        /* 버튼 색상별 스타일 */
-        .btn-green {
-            background-color: #1a4329;
-            color: #ffffff;
-        }
-        .btn-brown {
-            background-color: #ba8e55;
-            color: #ffffff;
-        }
+    /* '패밀리 사이트' 글자 스타일 */
+    .main-card-container .family-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;     /* 어두운 배경에서도 잘 보이도록 하얀 글자 */
+      margin: 0 0 12px 5px;
+    }
 
-        /* 미용재료 전용 카드 (미용재료는 살짝 미색 배경) */
-        .card.beauty-card {
-            background-color: #faf6ee;
-        }
+    /* 버튼들을 세로로 정렬 */
+    .main-card-container .family-buttons-list {
+      display: block;
+    }
 
-        /* 패밀리 사이트 영역 */
-        .family-site-box {
-            background-color: transparent;
-            border-radius: 20px;
-            padding: 15px 10px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            box-sizing: border-box;
-        }
+    /* ⭐ 요청하신 동그라미 모형 + 하얀 글자의 바로가기 버튼 */
+    .main-card-container .btn-family-round {
+      display: block;
+      text-align: center;
+      background-color: #3a3532; /* 상단 버튼들과 통일된 배경색 */
+      color: #ffffff;           /* 💡 선명한 하얀 글자 */
+      text-decoration: none;
+      padding: 14px 20px;
+      margin-bottom: 10px;       /* 버튼과 버튼 사이의 세로 간격 */
+      border-radius: 30px;       /* 💡 양 끝이 완벽하게 동그란 모형 */
+      font-size: 14px;
+      font-weight: 500;
+      box-sizing: border-box;
+    }
+    .main-card-container .btn-family-round:last-child {
+      margin-bottom: 0; /* 마지막 버튼은 아래 간격 제외 */
+    }
 
-        /* 패밀리 사이트 제목 */
-        .family-site-box h3 {
-            font-size: 16px;
-            color: #f7e178;
-            margin: 0 0 15px 0;
-            font-weight: bold;
-            border-left: 3px solid #f7e178;
-            padding-left: 8px;
-        }
-
-        /* 패밀리 사이트 바로가기 링크 */
-        .family-link {
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            margin-bottom: 15px;
-            font-weight: 500;
-            line-height: 1.4;
-        }
-        .family-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* 마우스 올렸을 때 효과 */
+    .main-card-container .btn-family-round:hover {
+      background-color: #4e4744;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <h1>휴브릿지 비즈 24</h1>
-            <div class="sub-menu">미용재료 &middot; 기업/가정 렌탈 &middot; 상품중개</div>
-            <div class="welcome">저희 공식 홈페이지에<br>오신 것을 환영합니다.</div>
-        </div>
-
-        <div class="grid-container">
-            <div class="card">
-                <div>
-                    <h2>기업&middot;가정 렌탈</h2>
-                    <p>운영 및 생활 가전 지원</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/sore2220" target="_blank" class="btn btn-green">장비렌탈 바로가기</a>
-                    <a href="http://withmoa.co.kr" target="_blank" class="btn btn-green">가전 렌탈 바로가기</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <h2>판매&middot;중개</h2>
-                    <p>음식물처리 기기<br>자료 보기</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="http://www.제로스톤.com" target="_blank" class="btn btn-green">상품중개 바로가기</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-container">
-            <div class="card beauty-card">
-                <div>
-                    <h2>미용재료</h2>
-                    <p>미용재료 및 클리닉<br>제품 공급</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/dlagh3" target="_blank" class="btn btn-brown">미용재료 바로가기</a>
-                </div>
-            </div>
-
-            <div class="family-site-box">
-                <h3>패밀리 사이트</h3>
-                <a href="https://blog.naver.com/haeyoung924" target="_blank" class="family-link">햇빛 노인 재가센터 바로가기 &gt;</a>
-                <a href="https://blog.naver.com/tmdgusdk119" target="_blank" class="family-link">주식회사 천리 환경 바로가기 &gt;</a>
-            </div>
-        </div>
+  <div class="main-card-container">
+    
+    <div class="info-card">
+      <h3>기업·가정 렌탈</h3>
+      <p>운영 및 정품 가전 지원</p>
+      <a href="#" class="btn-dark-standard">렌탈서비스 바로가기</a>
+      <a href="#" class="btn-dark-standard">가전/렌탈 바로가기</a>
     </div>
+
+    <div class="info-card">
+      <h3>판매·중개</h3>
+      <p>중시통화기 기기 자원 보기</p>
+      <a href="#" class="btn-dark-standard">판매중개 바로가기</a>
+    </div>
+
+    <div class="info-card">
+      <h3>미용재료</h3>
+      <p>미용재료 및 클리닉 제품 공급</p>
+      <a href="#" class="btn-dark-standard">미용재료 바로가기</a>
+    </div>
+
+    <div class="family-site-section">
+      <h3 class="family-title">패밀리 사이트</h3>
+      
+      <div class="family-buttons-list">
+        <a href="#" class="btn-family-round">햇빛 노인 재가 센터 바로가기</a>
+        <a href="#" class="btn-family-round">주식회사 천리환경 바로가기</a>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
