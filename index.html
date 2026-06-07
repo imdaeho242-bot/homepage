@@ -6,66 +6,56 @@
   <title>휴브릿지 비즈 24</title>
   
   <style>
-    /* 1. 사진 속 부드러운 짙은 초록색 전체 배경 설정 */
+    /* 1. 전체 배경 및 기본 폰트 설정 */
     body {
-      background-color: #1a4d32; /* 💡 실제 모바일 화면의 초록색 배경 */
+      background-color: #1a4d32; /* 짙은 초록색 메인 배경 */
       margin: 0;
       padding: 40px 15px;
       font-family: 'Malgun Gothic', sans-serif;
       color: #ffffff;
     }
-
-    /* 전체 레이아웃을 중앙으로 모아주는 틀 */
+    
     .main-wrapper {
-      max-width: 600px; /* 모바일과 PC 모두 예쁘게 보이는 너비 */
+      max-width: 600px;
       margin: 0 auto;
       box-sizing: border-box;
     }
 
-    /* 2. 상단 타이틀 및 안내 문구 영역 */
+    /* 2. 상단 헤더 영역 (타이틀 및 환영문구) */
     .header-section {
       text-align: center;
       margin-bottom: 35px;
     }
-
-    /* 휴브릿지 비즈 24 메인 제목 */
     .header-section h1 {
       font-size: 32px;
       font-weight: bold;
-      color: #fffbdf; /* 💡 사진 속 은은한 노란빛 글자색 */
+      color: #fffbdf; /* 은은한 노란빛 */
       margin: 0 0 10px 0;
       letter-spacing: -1px;
     }
-
-    /* 소제목 메뉴 레이어 (미용재료 · 기업/가정 렌탈. 상품중개) */
     .header-section .top-menu {
       font-size: 14px;
       color: #b3d1be;
       margin-bottom: 25px;
     }
-
-    /* 저희 공식 홈페이지에 오신 것을 환영합니다 */
     .header-section .welcome-text {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
       color: #ffffff;
       margin: 0;
     }
 
-
-    /* 3. 중간 1단 레이아웃 (기업/가정 렌탈, 판매·중개 반반 배치) */
+    /* 3. 중간 2단 카드 레이아웃 (기업/가정 렌탈 & 판매/중개) */
     .card-row-2col {
       display: flex;
       gap: 15px;
       margin-bottom: 20px;
     }
-
-    /* 기본 흰색 카드 스타일 */
+    
     .white-card {
-      background-color: #ffffff; /* 💡 깔끔한 흰색 바탕 */
-      border-radius: 25px;       /* 💡 모서리를 아주 부둥둥하게 */
-      padding: 25px 20px;
-      text-align: center;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 20px 15px;
       flex: 1;
       box-sizing: border-box;
       display: flex;
@@ -73,144 +63,164 @@
       justify-content: space-between;
     }
 
-    .white-card h3 {
-      font-size: 18px;
+    /* 카드 내 이미지와 텍스트를 나란히 배치하는 레이아웃 */
+    .card-title-group {
+      display: flex;
+      align-items: center; /* 수직 중앙 정렬 */
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    /* 심볼 이미지 사이즈 설정 */
+    .card-icon {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .card-title-text {
+      text-align: left;
+    }
+    .card-title-text h3 {
+      font-size: 16px;
       color: #111111;
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
       font-weight: bold;
+      word-break: keep-all;
     }
-
-    .white-card p {
-      font-size: 13px;
+    .card-title-text p {
+      font-size: 12px;
       color: #777777;
-      margin: 0 0 20px 0;
+      margin: 0;
+      word-break: keep-all;
     }
 
-    /* 카드 내부의 짙은 초록색 타원형 버튼 */
     .btn-green-basic {
       display: block;
-      background-color: #1a4d32; /* 배경과 통일감을 주는 진한 초록 */
+      background-color: #1a4d32;
       color: #ffffff;
       text-decoration: none;
       padding: 12px 10px;
-      border-radius: 30px;       /* 동그라미 모형 */
+      border-radius: 30px;
       margin-bottom: 8px;
       font-size: 13px;
       font-weight: bold;
+      text-align: center;
       box-sizing: border-box;
     }
     .btn-green-basic:last-child {
       margin-bottom: 0;
     }
 
-
-    /* ===================================================
-       🔥 [미용재료] 가로로 길쭉하고 가장 중요한 대형 카드
-       =================================================== */
+    /* 4. 하단 1단 대형 카드 레이아웃 (미용재료) */
     .large-beauty-card {
-      background-color: #ffffff; /* 본체는 흰색으로 깔끔하게 */
+      background-color: #ffffff;
       border-radius: 25px;
-      padding: 35px 20px;
-      text-align: center;
+      padding: 30px 20px;
       box-sizing: border-box;
       margin-bottom: 35px;
-      border: 3px solid #c29d6d; /* 💡 중요도를 나타내는 예쁜 골드/황토색 테두리 */
+      border: 3px solid #c29d6d; /* 황토/골드색 테두리 포인트 */
     }
 
-    /* 미용재료 큰 글자 */
-    .large-beauty-card h2 {
-      font-size: 26px;
+    .large-card-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* 미용재료 썸네일(YIKERU) 사이즈 설정 */
+    .large-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .large-text-group {
+      text-align: left;
+    }
+    .large-text-group h2 {
+      font-size: 24px;
       color: #111111;
-      margin: 0 0 8px 0;
+      margin: 0 0 6px 0;
+      font-weight: bold;
+    }
+    .large-text-group p {
+      font-size: 14px;
+      color: #c29d6d;
+      margin: 0;
       font-weight: bold;
     }
 
-    /* 미용재료 및 클리닉 제품 공급 (가장 또렷하게!) */
-    .large-beauty-card .highlight-p {
-      font-size: 15px;
-      color: #c29d6d; /* 💡 황토색 계열로 튀면서도 선명하게 처리 */
-      margin: 0 0 25px 0;
-      font-weight: bold;
-    }
-
-    /* 사진 속에 나오는 미용재료 전용 황토색 대형 버튼 */
     .btn-gold-large {
-      display: inline-block;
+      display: block;
       width: 100%;
-      max-width: 28px0px;
-      background-color: #c29d6d; /* 💡 사진 속 미용재료 버튼 색상 */
-      color: #ffffff;            /* 하얀 글자 */
+      background-color: #c29d6d;
+      color: #ffffff;
       text-decoration: none;
       padding: 15px 0;
-      border-radius: 30px;       /* 완벽한 동그라미 */
-      font-size: 15px;
+      border-radius: 30px;
+      font-size: 16px;
       font-weight: bold;
+      text-align: center;
       box-sizing: border-box;
     }
 
-
-    /* ===================================================
-       🔥 [패밀리 사이트] 은은하고 보기 좋은 하단 영역
-       =================================================== */
+    /* 5. 패밀리 사이트 영역 */
     .family-section {
       width: 100%;
       text-align: left;
     }
-
-    /* 패밀리 사이트 타이틀 (시선을 뺏지 않는 은은한 색상) */
     .family-section .title-text {
       font-size: 15px;
       font-weight: bold;
-      color: #a4c4b5; /* 💡 초록 배경 위에 부드럽게 얹히는 연초록/회색빛 */
+      color: #a4c4b5;
       margin: 0 0 12px 10px;
-      border-left: 3px solid #c29d6d; /* 왼쪽에 살짝 포인트를 주는 주황빛 선 */
+      border-left: 3px solid #c29d6d;
       padding-left: 8px;
     }
-
     .family-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
-    /* 글자들을 너무 띄우지 않고 모양새를 잡은 예쁜 배경 버튼 */
     .btn-family-style {
       display: block;
       text-align: center;
-      background: rgba(255, 255, 255, 0.08); /* 💡 반투명한 배경으로 세련되고 은은하게 */
+      background: rgba(255, 255, 255, 0.08);
       color: #ffffff;
       text-decoration: none;
       padding: 15px 20px;
-      border-radius: 30px; /* 완벽한 동그라미 모형 */
+      border-radius: 30px;
       font-size: 14px;
       font-weight: bold;
-      letter-spacing: -0.5px; /* 💡 적당하게 붙여서 보기 좋게 자간 조절 */
       box-sizing: border-box;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.2s;
-    }
-    .btn-family-style:hover {
-      background: rgba(255, 255, 255, 0.15);
     }
   </style>
 </head>
 <body>
-
   <div class="main-wrapper">
     
     <div class="header-section">
       <h1>휴브릿지 비즈 24</h1>
       <div class="top-menu">미용재료 · 기업/가정 렌탈 · 상품중개</div>
-      <p class="welcome-text">저희 공식 홈페이지에<br>오신 것을 환영합니다.</p>
+      <p class="welcome-text">
+        휴브릿지 비즈 24 공식 홈페이지를 방문해 주셔서 진심으로 감사합니다.<br>
+        저희 공식 홈페이지에 오신 것을 환영합니다.
+      </p>
     </div>
-
 
     <div class="card-row-2col">
       
       <div class="white-card">
-        <div>
-          <h3>기업·가정 렌탈</h3>
-          <p>운영 및 생활 가전 지원</p>
+        <div class="card-title-group">
+          <img src="렌탈장비이미지.jpg" alt="장비렌탈 기호" class="card-icon">
+          <div class="card-title-text">
+            <h3>기업·가정 렌탈</h3>
+            <p>운영 및 생활 가전 지원</p>
+          </div>
         </div>
         <div>
           <a href="https://blog.naver.com/sora2220" target="_blank" class="btn-green-basic">장비렌탈 바로가기</a>
@@ -219,9 +229,12 @@
       </div>
 
       <div class="white-card">
-        <div>
-          <h3>판매·중개</h3>
-          <p>음식물처리 기기<br>자료 보기</p>
+        <div class="card-title-group">
+          <img src="제로스톤이미지.jpg" alt="판매중개 기호" class="card-icon">
+          <div class="card-title-text">
+            <h3>판매·중개</h3>
+            <p>음식물처리 기기<br>자료 보기</p>
+          </div>
         </div>
         <div>
           <a href="https://www.제로스톤.com" target="_blank" class="btn-green-basic">상품중개 바로가기</a>
@@ -230,22 +243,5 @@
 
     </div>
 
-
     <div class="large-beauty-card">
-      <h2>미용재료</h2>
-      <p class="highlight-p">미용재료 및 클리닉 제품 공급</p>
-      <a href="https://blog.naver.com/dlaeogh3" target="_blank" class="btn-gold-large">미용재료 바로가기</a>
-    </div>
-
-
-    <div class="family-section">
-      <div class="title-text">패밀리 사이트</div>
-      
-      <div class="family-list">
-        <a href="https://blog.naver.com/haeyoung924" target="_blank" class="btn-family-style">햇빛 노인 재가 센터 바로가기</a>
-        <a href="https://blog.naver.com/tmdgusdk119" target="_blank" class="btn-family-style">(주) 천리환경 바로가기</a>
-      </div>
-    </div>
-
-  </div> </body>
-</html>
+      <div class="large-card-group">
