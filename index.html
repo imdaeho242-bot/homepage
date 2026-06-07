@@ -8,7 +8,7 @@
   <style>
     /* 1. 전체 배경 및 기본 폰트 설정 */
     body {
-      background-color: #1a4d32; /* 짙은 초록색 메인 배경 */
+      background-color: #1a4d32;
       margin: 0;
       padding: 40px 15px;
       font-family: 'Malgun Gothic', sans-serif;
@@ -29,7 +29,7 @@
     .header-section h1 {
       font-size: 32px;
       font-weight: bold;
-      color: #fffbdf; /* 은은한 노란빛 */
+      color: #fffbdf;
       margin: 0 0 10px 0;
       letter-spacing: -1px;
     }
@@ -66,7 +66,7 @@
     /* 카드 내 이미지와 텍스트를 나란히 배치하는 레이아웃 */
     .card-title-group {
       display: flex;
-      align-items: center; /* 수직 중앙 정렬 */
+      align-items: center;
       gap: 10px;
       margin-bottom: 15px;
     }
@@ -119,7 +119,7 @@
       padding: 30px 20px;
       box-sizing: border-box;
       margin-bottom: 35px;
-      border: 3px solid #c29d6d; /* 황토/골드색 테두리 포인트 */
+      border: 3px solid #c29d6d;
     }
 
     .large-card-group {
@@ -203,20 +203,24 @@
 <body>
   <div class="main-wrapper">
     
+    <!-- 타이틀 및 환영 문구 -->
     <div class="header-section">
       <h1>휴브릿지 비즈 24</h1>
       <div class="top-menu">미용재료 · 기업/가정 렌탈 · 상품중개</div>
+      <!-- 중복 문구 삭제 완료 -->
       <p class="welcome-text">
-        휴브릿지 비즈 24 공식 홈페이지를 방문해 주셔서 진심으로 감사합니다.<br>
         저희 공식 홈페이지에 오신 것을 환영합니다.
       </p>
     </div>
 
+    <!-- 렌탈 / 중개 카드 섹션 -->
     <div class="card-row-2col">
       
+      <!-- 카드 1: 장비구입·가정 렌탈 -->
       <div class="white-card">
         <div class="card-title-group">
-          <img src="렌탈장비이미지.jpg" alt="장비렌탈 기호" class="card-icon">
+          <!-- 실제 이미지 파일명 입력 완료 -->
+          <img src="1212.jpg" alt="장비렌탈 기호" class="card-icon">
           <div class="card-title-text">
             <h3>기업·가정 렌탈</h3>
             <p>운영 및 생활 가전 지원</p>
@@ -228,9 +232,11 @@
         </div>
       </div>
 
+      <!-- 카드 2: 판매·중개 -->
       <div class="white-card">
         <div class="card-title-group">
-          <img src="제로스톤이미지.jpg" alt="판매중개 기호" class="card-icon">
+          <!-- 실제 이미지 파일명 입력 완료 -->
+          <img src="재로스톤.jpg" alt="판매중개 기호" class="card-icon">
           <div class="card-title-text">
             <h3>판매·중개</h3>
             <p>음식물처리 기기<br>자료 보기</p>
@@ -243,5 +249,28 @@
 
     </div>
 
+    <!-- 미용재료 대형 카드 섹션 -->
     <div class="large-beauty-card">
       <div class="large-card-group">
+        <!-- 실제 이미지 파일명 입력 완료 -->
+        <img src="미용재료_2.jpg" alt="YIKERU 미용재료" class="large-icon">
+        <div class="large-text-group">
+          <h2>미용재료</h2>
+          <p>미용재료 및 클리닉 제품 공급</p>
+        </div>
+      </div>
+      <a href="https://blog.naver.com/dlaeogh3" target="_blank" class="btn-gold-large">미용재료 바로가기</a>
+    </div>
+
+    <!-- 하단 패밀리 사이트 -->
+    <div class="family-section">
+      <div class="title-text">패밀리 사이트</div>
+      <div class="family-list">
+        <a href="https://blog.naver.com/haeyoung924" target="_blank" class="btn-family-style">햇빛 노인 재가 센터 바로가기</a>
+        <a href="https://blog.naver.com/tmdgusdk119" target="_blank" class="btn-family-style">(주) 천리환경 바로가기</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
