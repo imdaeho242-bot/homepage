@@ -2,65 +2,52 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>휴브릿지 비즈 24</title>
-  
   <style>
-    body { background-color: #1a4d32; margin: 0; padding: 40px 15px; font-family: 'Malgun Gothic', sans-serif; color: #ffffff; }
-    .main-wrapper { max-width: 600px; margin: 0 auto; box-sizing: border-box; }
-    .header-section { text-align: center; margin-bottom: 35px; }
-    .header-section h1 { font-size: 32px; font-weight: bold; color: #fffbdf; margin: 0 0 10px 0; }
-    .welcome-text { font-size: 15px; line-height: 1.6; }
+    body { background-color: #1a4d32; margin: 0; padding: 20px; font-family: 'Malgun Gothic', sans-serif; color: #fff; text-align: center; }
+    .main { max-width: 500px; margin: 0 auto; }
     
-    .card-row-2col { display: flex; gap: 15px; margin-bottom: 20px; }
-    .white-card { background-color: #ffffff; border-radius: 25px; padding: 20px 15px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card-icon { width: 45px; height: 45px; object-fit: contain; margin-bottom: 10px; }
+    /* 카드 디자인: 중앙 정렬 */
+    .card { background: #fff; color: #000; padding: 25px; border-radius: 25px; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
     
-    .btn-green-basic { display: block; background-color: #1a4d32; color: #ffffff; text-decoration: none; padding: 10px; border-radius: 30px; margin-top: 8px; font-size: 12px; font-weight: bold; text-align: center; }
+    /* 이미지 디자인: 중앙 정렬 및 크기 고정 */
+    .card img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; }
     
-    .large-beauty-card { background-color: #ffffff; border-radius: 25px; padding: 30px 20px; border: 3px solid #c29d6d; text-align: center; margin-bottom: 35px; }
-    .large-icon { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; }
-    .btn-gold-large { display: block; background-color: #c29d6d; color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; font-size: 16px; font-weight: bold; margin-top: 20px; }
+    /* 버튼 디자인 */
+    .btn { display: block; width: 100%; max-width: 250px; background: #1a4d32; color: #fff; padding: 12px; border-radius: 30px; margin: 8px auto; text-decoration: none; font-weight: bold; }
+    .btn-gold { background: #c29d6d; }
     
-    .family-section { width: 100%; text-align: left; margin-bottom: 20px; }
-    .btn-family-style { display: block; background: rgba(255, 255, 255, 0.08); color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; margin-top: 10px; text-align: center; font-weight: bold; }
+    h2, h3 { margin: 5px 0; }
   </style>
 </head>
 <body>
-  <div class="main-wrapper">
-    <div class="header-section">
-      <h1>휴브릿지 비즈 24</h1>
-      <p class="welcome-text">저희 공식 홈페이지에 오신 것을 환영합니다.</p>
+  <div class="main">
+    <h1>휴브릿지 비즈 24</h1>
+    <p>저희 공식 홈페이지에 오신 것을 환영합니다.</p>
+
+    <!-- 1. 기업·가정 렌탈 -->
+    <div class="card">
+      <img src="1212.jpg" alt="렌탈">
+      <h3>기업·가정 렌탈</h3>
+      <p style="color:#777; font-size:14px; margin-bottom:15px;">장비.운영 및 생활 가전 지원</p>
+      <a href="https://blog.naver.com/sora2220" class="btn">장비렌탈 비즈 가기</a>
+      <a href="http://withmoa.co.kr" class="btn">가전 렌탈 비즈 가기</a>
     </div>
 
-    <div class="card-row-2col">
-      <!-- 기업·가정 렌탈 카드 -->
-      <div class="white-card">
-        <img src="1212.jpg" alt="렌탈" class="card-icon">
-        <h3 style="color:#111; margin:0 0 10px 0;">기업·가전 렌탈 비즈</h3>
-        <a href="https://blog.naver.com/sora2220" class="btn-green-basic">장비렌탈 바로가기</a>
-        <a href="http://withmoa.co.kr" class="btn-green-basic">생활.가전 렌탈 바로가기</a>
-      </div>
-      
-      <!-- 판매·중개 비즈 -->
-      <div class="white-card">
-        <img src="재로스톤.jpg" alt="중개" class="card-icon">
-        <h3 style="color:#111; margin:0 0 10px 0;">판매·중개</h3>
-        <a href="https://www.제로스톤.com" class="btn-green-basic">상품중개 비즈 가기</a>
-      </div>
+    <!-- 2. 판매·중개 -->
+    <div class="card">
+      <img src="재로스톤.jpg" alt="중개">
+      <h3>판매·중개</h3>
+      <p style="color:#777; font-size:14px; margin-bottom:15px;">음식물처리기 자료 보기</p>
+      <a href="https://www.제로스톤.com" class="btn">상품중개 지즈 가기</a>
     </div>
 
-    <!-- 미용재료 비즈 -->
-    <div class="large-beauty-card">
-      <img src="미용재료.jpg" alt="미용재료" class="large-icon">
-      <h2 style="color:#111; margin:0;">미용재료</h2>
-      <a href="https://blog.naver.com/dlaeogh3" class="btn-gold-large">미용재료 비즈 가기</a>
-    </div>
-
-    <!-- 패밀리 사이트 -->
-    <div class="family-section">
-      <a href="https://blog.naver.com/haeyoung924" class="btn-family-style">햇빛 노인 재가 센터 바로가기</a>
-      <a href="https://blog.naver.com/tmdgusdk119" class="btn-family-style">(주) 천리환경 바로가기</a>
+    <!-- 3. 미용재료 -->
+    <div class="card" style="border: 3px solid #c29d6d;">
+      <img src="미용재료.jpg" alt="미용">
+      <h2>미용재료</h2>
+      <p style="color:#c29d6d; font-weight:bold; margin-bottom:15px;">미용재료 및 클리닉 제품 공급</p>
+      <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold">미용재료 비즈 가기</a>
     </div>
   </div>
 </body>
