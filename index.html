@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>휴브릿지 비즈 24</title>
+  
   <style>
     body { background-color: #1a4d32; margin: 0; padding: 40px 15px; font-family: 'Malgun Gothic', sans-serif; color: #ffffff; }
     .main-wrapper { max-width: 600px; margin: 0 auto; box-sizing: border-box; }
     .header-section { text-align: center; margin-bottom: 35px; }
     .header-section h1 { font-size: 32px; font-weight: bold; color: #fffbdf; margin: 0 0 10px 0; }
     .welcome-text { font-size: 15px; line-height: 1.6; }
+    
     .card-row-2col { display: flex; gap: 15px; margin-bottom: 20px; }
-    .white-card { background-color: #ffffff; border-radius: 25px; padding: 20px 15px; flex: 1; display: flex; flex-direction: column; }
-    .card-icon { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; }
-    .btn-green-basic { display: block; background-color: #1a4d32; color: #ffffff; text-decoration: none; padding: 12px; border-radius: 30px; margin-top: 10px; font-size: 13px; text-align: center; }
+    .white-card { background-color: #ffffff; border-radius: 25px; padding: 20px 15px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-icon { width: 45px; height: 45px; object-fit: contain; margin-bottom: 10px; }
+    
+    .btn-green-basic { display: block; background-color: #1a4d32; color: #ffffff; text-decoration: none; padding: 10px; border-radius: 30px; margin-top: 8px; font-size: 12px; font-weight: bold; text-align: center; }
+    
     .large-beauty-card { background-color: #ffffff; border-radius: 25px; padding: 30px 20px; border: 3px solid #c29d6d; text-align: center; margin-bottom: 35px; }
     .large-icon { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; }
-    .btn-gold-large { display: block; background-color: #c29d6d; color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; font-size: 16px; margin-top: 20px; }
-    .family-section { width: 100%; text-align: left; }
-    .btn-family-style { display: block; background: rgba(255, 255, 255, 0.08); color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; margin-top: 10px; text-align: center; }
+    .btn-gold-large { display: block; background-color: #c29d6d; color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; font-size: 16px; font-weight: bold; margin-top: 20px; }
+    
+    .family-section { width: 100%; text-align: left; margin-bottom: 20px; }
+    .btn-family-style { display: block; background: rgba(255, 255, 255, 0.08); color: #ffffff; text-decoration: none; padding: 15px; border-radius: 30px; margin-top: 10px; text-align: center; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -29,24 +34,30 @@
     </div>
 
     <div class="card-row-2col">
+      <!-- 기업·가정 렌탈 카드 -->
       <div class="white-card">
         <img src="1212.jpg" alt="렌탈" class="card-icon">
-        <h3 style="color:#111;">기업·가정 렌탈</h3>
+        <h3 style="color:#111; margin:0 0 10px 0;">기업·가전 렌탈 비즈</h3>
         <a href="https://blog.naver.com/sora2220" class="btn-green-basic">장비렌탈 바로가기</a>
+        <a href="http://withmoa.co.kr" class="btn-green-basic">생활.가전 렌탈 바로가기</a>
       </div>
+      
+      <!-- 판매·중개 비즈 -->
       <div class="white-card">
         <img src="재로스톤.jpg" alt="중개" class="card-icon">
-        <h3 style="color:#111;">판매·중개</h3>
-        <a href="https://www.제로스톤.com" class="btn-green-basic">상품중개 바로가기</a>
+        <h3 style="color:#111; margin:0 0 10px 0;">판매·중개</h3>
+        <a href="https://www.제로스톤.com" class="btn-green-basic">상품중개 비즈 가기</a>
       </div>
     </div>
 
+    <!-- 미용재료 비즈 -->
     <div class="large-beauty-card">
       <img src="미용재료.jpg" alt="미용재료" class="large-icon">
-      <h2 style="color:#111;">미용재료</h2>
-      <a href="https://blog.naver.com/dlaeogh3" class="btn-gold-large">미용재료 바로가기</a>
+      <h2 style="color:#111; margin:0;">미용재료</h2>
+      <a href="https://blog.naver.com/dlaeogh3" class="btn-gold-large">미용재료 비즈 가기</a>
     </div>
 
+    <!-- 패밀리 사이트 -->
     <div class="family-section">
       <a href="https://blog.naver.com/haeyoung924" class="btn-family-style">햇빛 노인 재가 센터 바로가기</a>
       <a href="https://blog.naver.com/tmdgusdk119" class="btn-family-style">(주) 천리환경 바로가기</a>
