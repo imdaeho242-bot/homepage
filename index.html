@@ -6,34 +6,28 @@
   <title>휴브릿지 비즈 24</title>
   <style>
     body { background-color: #1a4d32; margin: 0; padding: 20px 10px; font-family: 'Malgun Gothic', sans-serif; color: #ffffff; }
-    
-    /* 모바일에서 꽉 차게 보이도록 max-width를 100%에 가깝게 조정 */
-    .main-wrapper { width: 100%; max-width: 95%; margin: 0 auto; box-sizing: border-box; }
-    
+    .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
     .header-section { text-align: center; margin-bottom: 25px; }
-    h1 { font-size: 28px; font-weight: bold; color: #fffbdf; margin: 0 0 10px 0; }
-    .top-menu { font-size: 13px; color: #b3d1be; margin-bottom: 20px; }
+    h1 { font-size: 26px; font-weight: bold; color: #fffbdf; margin: 0 0 5px 0; }
+    .top-menu { font-size: 12px; color: #b3d1be; margin-bottom: 15px; }
     
-    /* 2단 카드 레이아웃: 모바일에서 간격을 10px로 조절 */
-    .card-row-2col { display: flex; gap: 10px; margin-bottom: 15px; }
-    .white-card { background-color: #ffffff; border-radius: 20px; padding: 15px 10px; flex: 1; color: #111111; display: flex; flex-direction: column; }
+    /* 2단 카드 구도 개선: 아이콘 위, 글자 아래 */
+    .card-row-2col { display: flex; gap: 10px; margin-bottom: 10px; }
+    .white-card { background-color: #ffffff; border-radius: 20px; padding: 15px 5px; flex: 1; color: #111111; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .card-icon { width: 50px; height: 50px; margin-bottom: 8px; object-fit: contain; }
+    .card-title-text h3 { font-size: 15px; margin: 0 0 5px 0; font-weight: bold; }
+    .card-title-text p { font-size: 11px; color: #777777; margin: 0 0 10px 0; }
     
-    .card-title-group { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 10px; text-align: center; }
-    .card-icon { width: 40px; height: 40px; object-fit: contain; }
-    .card-title-text h3 { font-size: 14px; margin: 0; }
-    .card-title-text p { font-size: 11px; color: #777777; margin: 0; }
+    .btn-green-basic { display: block; background-color: #1a4d32; color: #ffffff; width: 90%; padding: 8px 0; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
     
-    .btn-green-basic { display: block; background-color: #1a4d32; color: #ffffff; text-align: center; padding: 10px 5px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: bold; margin-top: 5px; }
+    /* 미용재료 카드 구도 개선 */
+    .large-beauty-card { background-color: #ffffff; border-radius: 20px; padding: 20px; margin-bottom: 25px; border: 3px solid #c29d6d; color: #111111; text-align: center; }
+    .large-card-group { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; }
+    .large-icon { width: 40px; height: 40px; object-fit: contain; }
+    .btn-gold-large { display: block; background-color: #c29d6d; color: #ffffff; padding: 12px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: bold; }
     
-    /* 대형 카드 */
-    .large-beauty-card { background-color: #ffffff; border-radius: 20px; padding: 20px; margin-bottom: 25px; border: 3px solid #c29d6d; color: #111111; }
-    .large-card-group { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px; }
-    .large-icon { width: 60px; height: 60px; object-fit: contain; }
-    .btn-gold-large { display: block; background-color: #c29d6d; color: #ffffff; text-align: center; padding: 12px; border-radius: 25px; text-decoration: none; font-size: 15px; font-weight: bold; }
-    
-    /* 패밀리 사이트 */
     .family-section { width: 100%; }
-    .title-text { font-size: 14px; font-weight: bold; color: #a4c4b5; margin-bottom: 10px; border-left: 3px solid #c29d6d; padding-left: 8px; }
+    .title-text { font-size: 13px; font-weight: bold; color: #a4c4b5; margin-bottom: 10px; border-left: 3px solid #c29d6d; padding-left: 8px; }
     .btn-family-style { display: block; text-align: center; background: rgba(255, 255, 255, 0.08); color: #ffffff; padding: 12px; border-radius: 25px; text-decoration: none; margin-bottom: 8px; border: 1px solid rgba(255, 255, 255, 0.2); font-size: 13px; }
   </style>
 </head>
@@ -42,32 +36,30 @@
     <div class="header-section">
       <h1>휴브릿지 비즈 24</h1>
       <div class="top-menu">미용재료 · 기업/가정 렌탈 · 상품중개</div>
-      <p>저희 공식 홈페이지에 오신 것을 환영합니다.</p>
+      <p style="font-size: 14px;">저희 공식 홈페이지에 오신 것을 환영합니다.</p>
     </div>
     
     <div class="card-row-2col">
       <div class="white-card">
-        <div class="card-title-group">
-          <img src="주소1.jpg" alt="렌탈" class="card-icon">
-          <div class="card-title-text"><h3>기업·가정 렌탈</h3><p>운영 및 생활 가전</p></div>
-        </div>
+        <img src="https://i.imgur.com/yWLrabS.jpeg
+" alt="렌탈" class="card-icon">
+        <div class="card-title-text"><h3>기업·가정 렌탈</h3><p>운영 및 생활 가전</p></div>
         <a href="https://blog.naver.com/sora2220" class="btn-green-basic">장비렌탈 바로가기</a>
         <a href="http://withmoa.co.kr" class="btn-green-basic">가전 렌탈 바로가기</a>
       </div>
       <div class="white-card">
-        <div class="card-title-group">
-          <img src="주소2.jpg" alt="중개" class="card-icon">
-          <div class="card-title-text"><h3>판매·중개</h3><p>음식물처리 기기</p></div>
-        </div>
+        <img src="https://i.imgur.com/BKLrjUL.jpeg" alt="중개" class="card-icon">
+        <div class="card-title-text"><h3>판매·중개</h3><p>음식물처리 기기</p></div>
         <a href="https://www.제로스톤.com" class="btn-green-basic">상품중개 바로가기</a>
       </div>
     </div>
     
     <div class="large-beauty-card">
       <div class="large-card-group">
-        <img src="주소3.jpg" alt="미용" class="large-icon">
-        <div><h2>미용재료</h2><p>미용재료 및 클리닉 제품 공급</p></div>
+        <img src="https://i.imgur.com/3S92n7S.jpeg" alt="미용" class="large-icon">
+        <h2 style="font-size: 20px; margin: 0;">미용재료</h2>
       </div>
+      <p style="font-size: 13px; margin-bottom: 15px;">미용재료 및 클리닉 제품 공급</p>
       <a href="https://blog.naver.com/dlaeogh3" class="btn-gold-large">미용재료 바로가기</a>
     </div>
     
