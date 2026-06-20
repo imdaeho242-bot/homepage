@@ -8,20 +8,22 @@
     :root {
       --main-bg: #1a3a2d;
       --accent-gold: #c5a059;
+      --gold-gradient: linear-gradient(135deg, #d4af37, #f3e5ab);
       --card-bg: #ffffff;
       --text-main: #ffffff;
       --text-dark: #333333;
     }
-    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', 'Malgun Gothic', sans-serif; color: var(--text-main); }
+    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-main); }
     .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
-    .header-section { text-align: center; margin-bottom: 20px; }
-    .title-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     
-    /* 전화번호 섹션 추가 */
-    .contact-banner { 
-      background: var(--accent-gold); color: #fff; padding: 10px; 
-      border-radius: 8px; margin: 15px 0; font-weight: bold; font-size: 16px;
-      text-align: center; letter-spacing: 0.5px;
+    /* 사진 내부 전화번호 스타일 */
+    .img-container { position: relative; width: 100%; margin-bottom: 20px; }
+    .title-img { width: 100%; height: auto; border-radius: 12px; display: block; }
+    .contact-overlay { 
+      position: absolute; bottom: 15px; left: 15px; right: 15px;
+      background: rgba(0,0,0,0.6); color: #fff; padding: 8px;
+      border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px;
+      backdrop-filter: blur(4px);
     }
     
     .kakao-btn { 
@@ -38,13 +40,17 @@
     .card { background: var(--card-bg); border-radius: 16px; padding: 20px 10px; color: var(--text-dark); text-align: center; }
     .card h3 { margin: 0 0 15px 0; font-size: 15px; }
     
-    .beauty-card { background: #fdf6e3; border: 2px solid var(--accent-gold); border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; }
-    
+    /* 미용재료 골드 스타일 적용 */
+    .beauty-card { 
+      background: var(--gold-gradient); 
+      border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .beauty-card h3 { color: #5d4a1f; margin-top: 0; font-weight: bold; }
+    .btn-gold-text { background-color: #5d4a1f !important; color: #fff !important; }
     .btn { display: block; padding: 10px 0; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; margin: 6px 0; color: #fff; transition: opacity 0.2s; }
-    .btn:hover { opacity: 0.9; }
     .btn-blue { background-color: #2c3e50; }
     .btn-purple { background-color: #7b4397; }
-    .btn-gold { background-color: var(--accent-gold); color: #fff; }
     
     .family-section { margin-top: 10px; }
     .family-title { font-size: 12px; color: var(--accent-gold); margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
@@ -53,16 +59,14 @@
 </head>
 <body>
   <div class="main-wrapper">
-    <div class="header-section">
+    <div class="img-container">
       <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 비즈 24" class="title-img">
-      
-      <div class="contact-banner">
-        상담 문의: 010-6451-9115
-      </div>
-      <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
-        <span class="brand-logo-small">HU</span> 카카오톡 상담 바로가기
-      </a>
+      <div class="contact-overlay">상담 문의: 010-6451-9115</div>
     </div>
+      
+    <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
+      <span class="brand-logo-small">HU</span> 카카오톡 상담 바로가기
+    </a>
     <section class="intro-text">
       휴브릿지는 미용재료를 비롯한 다양한 산업 분야의 제품 및 의료용 장비 공급, 창업, 생활가전 렌탈 서비스, 그리고 사업 운영에 필요한 자금 지원을 통해 미래를 함께 설계하는 전문 비즈니스 파트너입니다.
     </section>
@@ -81,8 +85,8 @@
     </div>
     
     <div class="beauty-card">
-      <h3 style="color: #1a4d32; margin-top: 0;">미용재료</h3>
-      <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold">미용재료 blog</a>
+      <h3>미용재료</h3>
+      <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold-text">미용재료 blog</a>
     </div>
     
     <div class="family-section">
