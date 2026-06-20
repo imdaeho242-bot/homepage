@@ -1,197 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>휴 브릿지 비즈 365</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>휴브릿지 비즈 24</title>
+  <style>
+    :root {
+      --main-bg: #121212;
+      --accent-gold: #c5a059;
+      --card-bg: #1e1e1e;
+      --text-white: #ffffff;
+    }
+    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-white); }
+    .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
     
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    /* 타이틀 및 사진 영역 */
+    .img-container { position: relative; width: 100%; margin-bottom: 15px; }
+    .title-img { width: 100%; border-radius: 12px; display: block; }
+    
+    /* 브랜드명 스타일 강화: 그림자를 넣어 더욱 고급스럽게 */
+    .brand-top { 
+      position: absolute; top: 20px; left: 20px; 
+      color: #fff; font-size: 24px; font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      letter-spacing: -0.5px;
+    }
 
-    <style>
-        /* 기본 스타일 초기화 */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* 모바일 화면 컨테이너 (초록색 그라데이션 배경) */
-        .mobile-container {
-            width: 360px;
-            height: auto;
-            min-height: 740px;
-            background: linear-gradient(180deg, #1A4731 0%, #296045 100%);
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            padding: 40px 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            box-sizing: border-box;
-        }
-
-        /* 상단 헤더 섹션 */
-        .main-header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .logo-text {
-            font-size: 28px;
-            font-weight: 700;
-            color: #F8E3C0; /* 부드러운 골드 색상 */
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        .sub-text {
-            font-size: 14px;
-            color: #fff;
-            opacity: 0.8;
-            margin: 10px 0 0;
-        }
-
-        /* 카드 그리드 영역 (좌측/우측 2열로 정교하게 쪼개주는 핵심 설정) */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* 개별 카드 스타일 */
-        .card {
-            background-color: #fff;
-            border-radius: 15px;
-            padding: 20px 12px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            box-sizing: border-box;
-            min-height: 210px;
-        }
-
-        /* 미용재료 카드 (밑바닥에 가로로 꽉 차게 늘려주는 스타일) */
-        .card-full {
-            grid-column: span 2;
-            min-height: 140px;
-        }
-
-        .card h2 {
-            font-size: 17px;
-            font-weight: 700;
-            color: #111;
-            margin: 0 0 6px 0;
-        }
-
-        .card p {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.4;
-            margin: 0 0 12px 0;
-            word-break: keep-all;
-        }
-
-        .card-white { background-color: #fff; }
-        .card-beige { background-color: #FBF7EC; }
-
-        /* 버튼 스타일 */
-        .btn {
-            display: block;
-            padding: 10px 5px;
-            font-size: 11.5px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 20px;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 6px;
-            text-align: center;
-        }
-        
-        .btn:last-child {
-            margin-bottom: 0;
-        }
-
-        .btn-green { background-color: #1A4731; color: #fff; }
-        .btn-dark { background-color: #333; color: #fff; }
-        .btn-gold { background-color: #C0955B; color: #fff; }
-
-        /* 하단 링크 영역 */
-        .footer-links {
-            margin-top: auto;
-            padding-top: 35px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .footer-links a {
-            display: block;
-            font-size: 13px;
-            color: #F4DFA8;
-            text-decoration: none;
-            margin-bottom: 12px;
-            opacity: 0.9;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* 사진 내 좌측 하단 상담문의 */
+    .contact-overlay { 
+      position: absolute; bottom: 15px; left: 20px; 
+      background: rgba(0,0,0,0.6); color: var(--accent-gold); 
+      padding: 6px 12px; border-radius: 6px; font-weight: bold; font-size: 14px;
+      border: 1px solid var(--accent-gold);
+    }
+    
+    .kakao-btn { 
+      display: flex; align-items: center; justify-content: center;
+      background-color: #fee500; color: #3c1e1e; padding: 12px; 
+      border-radius: 8px; text-decoration: none; font-weight: bold; 
+      margin-bottom: 20px; font-size: 14px; width: 100%; box-sizing: border-box;
+    }
+    
+    .intro-text { font-size: 14px; line-height: 1.6; padding: 15px; background: #1e1e1e; border-radius: 10px; margin-bottom: 20px; border-left: 3px solid var(--accent-gold); }
+    
+    .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .card { background: var(--card-bg); border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #333; }
+    .card h3 { font-size: 14px; margin-bottom: 10px; color: var(--accent-gold); }
+    
+    .btn-link { 
+      display: block; font-size: 12px; margin-top: 6px; padding: 8px; 
+      border-radius: 6px; text-decoration: none; font-weight: bold; color: #fff;
+    }
+    .bg-blue { background: #2c3e50; }
+    .bg-purple { background: #7b4397; }
+    .bg-gold { background: var(--accent-gold); color: #000; }
+    
+    .family-section { margin-top: 25px; }
+    .family-btn { display: block; background: #222; color: #ccc; padding: 12px; border-radius: 8px; text-decoration: none; margin-bottom: 8px; font-size: 13px; text-align: center; border: 1px solid #444; }
+  </style>
 </head>
 <body>
-    <div class="mobile-container">
-        <header class="main-header">
-            <h1 class="logo-text">휴 브릿지 비즈24</h1>
-            <p class="sub-text">미용재료 · 기업/가정 렌탈 · 상품중개</p>
-        </header>
-
-        <main class="content-grid">
-            
-            <div class="card card-white">
-                <div>
-                    <h2>기업·가정 렌탈</h2>
-                    <p>운영 및 생활 가전 지원</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/sora2220" class="btn btn-green" target="_blank">장비렌탈 바로가기</a>
-                    <a href="http://www.withmoa.co.kr" class="btn btn-green" target="_blank">생활가전 렌탈</a>
-                </div>
-            </div>
-
-            <div class="card card-white">
-                <div>
-                    <h2>상품 판매·중개</h2>
-                    <p>음식물처리기<br>자료 보기</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://m.mybox.naver.com/mobile/share/list/doc-viewer/ZGxhZW9naDMzNjUvMTMxTzA2Njk2MDI2Mjc4MjAzNzU1OTM5MTgyODE5NDM4NjM4NjI1OTYzMDIy" class="btn btn-dark" target="_blank">상품중개 바로가기</a>
-                </div>
-            </div>
-
-            <div class="card card-beige card-full">
-                <div>
-                    <h2>미용재료</h2>
-                    <p>미용재료 및 클리닉 제품 공급</p>
-                </div>
-                <div style="width: 100%;">
-                    <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold" target="_blank">미용재료 바로가기</a>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer-links">
-            <a href="https://blog.naver.com/haeyoung924" target="_blank">햇빛 노인재가센터 바로가기</a>
-            <a href="https://blog.naver.com/tmdgusdk119" target="_blank">(주)천리환경 바로가기</a>
-        </footer>
+  <div class="main-wrapper">
+    <div class="img-container">
+      <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 비즈 24" class="title-img">
+      <div class="brand-top">휴브릿지 비즈 24</div>
+      <div class="contact-overlay">상담 문의: 010-6451-9115</div>
     </div>
+      
+    <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">카카오톡 상담 바로가기</a>
+
+    <section class="intro-text">
+      휴브릿지는 미용재료, 의료장비 공급, 창업, 생활가전 렌탈 및 자금 지원을 통해 고객님의 성공적인 비즈니스를 돕는 전문 파트너입니다.
+    </section>
+    
+    <div class="card-row">
+      <div class="card">
+        <h3>기업·가전 렌탈</h3>
+        <a href="https://blog.naver.com/sora2220" class="btn-link bg-blue">장비렌탈 블로그</a>
+        <a href="http://withmoa.co.kr" class="btn-link bg-blue">가전렌탈 바로가기</a>
+      </div>
+      <div class="card">
+        <h3>상품 판매·중개</h3>
+        <a href="http://www.제로스톤.com" class="btn-link bg-purple">상품중개 블로그</a>
+        <a href="https://i.imgur.com/j2xJywP.png" class="btn-link bg-purple">창업 상담 바로가기</a>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>미용재료 전문</h3>
+      <a href="https://blog.naver.com/dlaeogh3" class="btn-link bg-gold">미용재료 블로그 바로가기</a>
+    </div>
+    
+    <div class="family-section">
+      <div style="font-size:12px; color:var(--accent-gold); margin-bottom:10px; text-align:center;">FAMILY SITE</div>
+      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터</a>
+      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경</a>
+    </div>
+  </div>
 </body>
 </html>
