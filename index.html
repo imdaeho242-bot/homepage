@@ -8,91 +8,77 @@
     :root {
       --main-bg: #1a3a2d;
       --accent-gold: #c5a059;
-      --gold-gradient: linear-gradient(135deg, #d4af37, #f3e5ab);
       --card-bg: #ffffff;
-      --text-main: #ffffff;
       --text-dark: #333333;
     }
-    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-main); }
+    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: #fff; }
     .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
     
-    /* 사진 내부 전화번호 스타일 */
-    .img-container { position: relative; width: 100%; margin-bottom: 20px; }
-    .title-img { width: 100%; height: auto; border-radius: 12px; display: block; }
-    .contact-overlay { 
-      position: absolute; bottom: 15px; left: 15px; right: 15px;
-      background: rgba(0,0,0,0.6); color: #fff; padding: 8px;
-      border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px;
-      backdrop-filter: blur(4px);
-    }
+    /* 상단 영역 */
+    .header-section { text-align: center; margin-bottom: 15px; }
+    .title-img { width: 100%; border-radius: 12px; }
+    .brand-name { font-size: 20px; font-weight: bold; margin: 10px 0; color: var(--accent-gold); }
     
+    /* 전화번호 위치: 사진 하단 별도 배치 */
+    .contact-line { font-size: 15px; font-weight: bold; padding: 10px; border-bottom: 2px solid var(--accent-gold); margin-bottom: 15px; }
+    
+    /* 카카오톡 버튼: 1/2 크기로 축소 */
     .kakao-btn { 
       display: flex; align-items: center; justify-content: center;
-      background-color: #fee500; color: #3c1e1e; padding: 14px; 
-      border-radius: 12px; text-decoration: none; font-weight: 800; 
-      margin-bottom: 15px; font-size: 15px; gap: 10px;
+      background-color: #fee500; color: #3c1e1e; padding: 10px 20px; 
+      border-radius: 8px; text-decoration: none; font-weight: bold; 
+      margin: 0 auto 20px auto; font-size: 14px; width: 80%;
     }
-    .brand-logo-small { background: #3c1e1e; color: #fee500; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
     
-    .intro-text { font-size: 14px; line-height: 1.7; margin-bottom: 25px; padding: 20px; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+    .intro-text { font-size: 14px; line-height: 1.6; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-bottom: 20px; }
     
-    .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-    .card { background: var(--card-bg); border-radius: 16px; padding: 20px 10px; color: var(--text-dark); text-align: center; }
-    .card h3 { margin: 0 0 15px 0; font-size: 15px; }
+    .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .card { background: var(--card-bg); border-radius: 12px; padding: 15px; color: var(--text-dark); text-align: center; }
     
-    /* 미용재료 골드 스타일 적용 */
+    /* 미용재료 골드 배경 및 이미지 */
     .beauty-card { 
-      background: var(--gold-gradient); 
-      border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #d4af37, #f3e5ab); 
+      border-radius: 12px; padding: 15px; margin-bottom: 20px; text-align: center; color: #333;
     }
-    .beauty-card h3 { color: #5d4a1f; margin-top: 0; font-weight: bold; }
-    .btn-gold-text { background-color: #5d4a1f !important; color: #fff !important; }
-    .btn { display: block; padding: 10px 0; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; margin: 6px 0; color: #fff; transition: opacity 0.2s; }
-    .btn-blue { background-color: #2c3e50; }
-    .btn-purple { background-color: #7b4397; }
+    .beauty-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
     
-    .family-section { margin-top: 10px; }
-    .family-title { font-size: 12px; color: var(--accent-gold); margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
-    .family-btn { display: block; background: rgba(0,0,0,0.2); color: #fff; padding: 14px; border-radius: 10px; text-decoration: none; margin-bottom: 8px; font-size: 13px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+    .family-section { margin-top: 20px; border-top: 1px solid #444; padding-top: 10px; }
+    .family-btn { display: block; background: #333; color: #fff; padding: 12px; border-radius: 8px; text-decoration: none; margin-bottom: 8px; font-size: 13px; text-align: center; }
   </style>
 </head>
 <body>
   <div class="main-wrapper">
-    <div class="img-container">
+    <div class="header-section">
       <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 비즈 24" class="title-img">
-      <div class="contact-overlay">상담 문의: 010-6451-9115</div>
+      <div class="brand-name">휴브릿지 비즈 24</div>
+      <div class="contact-line">상담 문의: 010-6451-9115</div>
+      <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">카카오톡 상담 바로가기</a>
     </div>
-      
-    <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
-      <span class="brand-logo-small">HU</span> 카카오톡 상담 바로가기
-    </a>
     <section class="intro-text">
-      휴브릿지는 미용재료를 비롯한 다양한 산업 분야의 제품 및 의료용 장비 공급, 창업, 생활가전 렌탈 서비스, 그리고 사업 운영에 필요한 자금 지원을 통해 미래를 함께 설계하는 전문 비즈니스 파트너입니다.
+      휴브릿지는 미용재료, 의료장비 공급, 창업, 생활가전 렌탈 및 자금 지원을 통해 고객님의 성공적인 비즈니스를 돕는 전문 파트너입니다.
     </section>
     
     <div class="card-row">
       <div class="card">
         <h3>기업·가전 렌탈</h3>
-        <a href="https://blog.naver.com/sora2220" class="btn btn-blue">장비렌탈 blog</a>
-        <a href="http://withmoa.co.kr" class="btn btn-blue">가전렌탈 바로가기</a>
+        <a href="https://blog.naver.com/sora2220" style="display:block; font-size:12px; margin-top:5px;">장비렌탈 바로가기</a>
       </div>
       <div class="card">
         <h3>상품 판매·중개</h3>
-        <a href="http://www.제로스톤.com" class="btn btn-purple">상품중개 blog</a>
-        <a href="https://i.imgur.com/j2xJywP.png" class="btn btn-purple">창업 상담</a>
+        <a href="http://www.제로스톤.com" style="display:block; font-size:12px; margin-top:5px;">상품중개 바로가기</a>
       </div>
     </div>
     
     <div class="beauty-card">
-      <h3>미용재료</h3>
-      <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold-text">미용재료 blog</a>
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c074?w=500" alt="미용재료">
+      <h3 style="margin:5px 0;">미용재료 전문</h3>
+      <a href="https://blog.naver.com/dlaeogh3" style="color:#000; font-weight:bold;">미용재료 blog 바로가기</a>
     </div>
     
     <div class="family-section">
-      <div class="family-title">FAMILY SITE</div>
-      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터 blog</a>
-      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경 blog</a>
+      <div style="font-size:12px; color:var(--accent-gold); margin-bottom:10px;">FAMILY SITE</div>
+      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터</a>
+      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경</a>
     </div>
   </div>
 </body>
