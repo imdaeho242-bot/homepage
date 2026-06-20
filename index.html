@@ -12,16 +12,26 @@
       --text-main: #ffffff;
       --text-dark: #333333;
     }
-    /* 전체 여백 조정: 위쪽 여백을 줄여 전체적으로 위로 정렬 */
     body { background-color: var(--main-bg); margin: 0; padding: 10px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-main); }
     .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
     
-    /* 상단 로고 삭제 후 배너부터 시작 */
     .brand-header { text-align: center; margin-bottom: 10px; }
     .title-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     
-    /* 전화번호 및 상담 버튼 */
-    .contact-banner { background: var(--accent-gold); color: #fff; padding: 10px; border-radius: 8px; margin: 10px 0; font-weight: bold; font-size: 16px; text-align: center; }
+    /* 전화 연결 링크 스타일 - 텍스트 색상 및 밑줄 설정 */
+    .contact-link { 
+      display: block;
+      background: var(--accent-gold); 
+      color: #fff; 
+      padding: 12px; 
+      border-radius: 8px; 
+      margin: 10px 0; 
+      font-weight: bold; 
+      font-size: 16px; 
+      text-align: center; 
+      text-decoration: none; /* 밑줄 제거 */
+    }
+    
     .kakao-btn { display: flex; align-items: center; justify-content: center; background-color: #fee500; color: #3c1e1e; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; margin-bottom: 15px; font-size: 15px; gap: 10px; }
     
     .intro-text { font-size: 14px; line-height: 1.6; margin-bottom: 15px; padding: 15px; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
@@ -30,7 +40,6 @@
     .card { background: var(--card-bg); border-radius: 16px; padding: 15px 10px; color: var(--text-dark); text-align: center; }
     .card h3 { margin: 0 0 10px 0; font-size: 15px; }
     
-    /* 미용재료 섹션 */
     .beauty-card { background: linear-gradient(135deg, #fdf6e3 0%, #e8d0a9 100%); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 15px; margin-bottom: 15px; text-align: center; }
     .beauty-card h3 { color: #1a4d32; margin-bottom: 10px; }
     
@@ -49,9 +58,10 @@
     <div class="brand-header">
       <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 배너" class="title-img">
       
-      <div class="contact-banner">
+      <a href="tel:01064519115" class="contact-link">
         상담 문의: 010-6451-9115
-      </div>
+      </a>
+
       <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
         <span>HU</span> 카카오톡 상담 바로가기
       </a>
