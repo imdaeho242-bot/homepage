@@ -6,94 +6,83 @@
   <title>휴브릿지 비즈 24</title>
   <style>
     :root {
-      --main-bg: #121212;
+      --main-bg: #1a3a2d;
       --accent-gold: #c5a059;
-      --card-bg: #1e1e1e;
-      --text-white: #ffffff;
+      --card-bg: #ffffff;
+      --text-main: #ffffff;
+      --text-dark: #333333;
     }
-    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-white); }
+    body { background-color: var(--main-bg); margin: 0; padding: 20px 10px; font-family: 'Pretendard', sans-serif; color: var(--text-main); }
     .main-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
     
-    /* 타이틀 및 사진 영역 */
-    .img-container { position: relative; width: 100%; margin-bottom: 15px; }
-    .title-img { width: 100%; border-radius: 12px; display: block; }
+    /* 상단 로고 및 배너 */
+    .brand-header { text-align: center; margin-bottom: 15px; }
+    .brand-title { font-size: 24px; font-weight: 800; color: var(--accent-gold); margin-bottom: 10px; }
+    .title-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     
-    /* 브랜드명: 중복 삭제 후 단독 표기 및 위치 고정 */
-    .brand-top { 
-      position: absolute; top: 20px; left: 20px; 
-      color: #fff; font-size: 24px; font-weight: 800;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    }
-
-    /* 상담문의: 사진 내 좌측 하단 */
-    .contact-overlay { 
-      position: absolute; bottom: 15px; left: 20px; 
-      background: rgba(0,0,0,0.6); color: var(--accent-gold); 
-      padding: 6px 12px; border-radius: 6px; font-weight: bold; font-size: 14px;
-      border: 1px solid var(--accent-gold);
-    }
+    /* 전화번호 및 상담 버튼 */
+    .contact-banner { background: var(--accent-gold); color: #fff; padding: 12px; border-radius: 8px; margin: 15px 0; font-weight: bold; font-size: 16px; text-align: center; }
+    .kakao-btn { display: flex; align-items: center; justify-content: center; background-color: #fee500; color: #3c1e1e; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 800; margin-bottom: 20px; font-size: 15px; gap: 10px; }
     
-    .kakao-btn { 
-      display: flex; align-items: center; justify-content: center;
-      background-color: #fee500; color: #3c1e1e; padding: 12px; 
-      border-radius: 8px; text-decoration: none; font-weight: bold; 
-      margin-bottom: 20px; font-size: 14px; width: 100%; box-sizing: border-box;
-    }
+    .intro-text { font-size: 14px; line-height: 1.7; margin-bottom: 25px; padding: 20px; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
     
-    .intro-text { font-size: 14px; line-height: 1.6; padding: 15px; background: #1e1e1e; border-radius: 10px; margin-bottom: 20px; border-left: 3px solid var(--accent-gold); }
+    .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .card { background: var(--card-bg); border-radius: 16px; padding: 20px 10px; color: var(--text-dark); text-align: center; }
+    .card h3 { margin: 0 0 15px 0; font-size: 15px; }
     
-    .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-    .card { background: var(--card-bg); border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #333; }
-    .card h3 { font-size: 14px; margin-bottom: 10px; color: var(--accent-gold); }
+    /* 미용재료 섹션 (요청하신 골드 배경 및 스타일) */
+    .beauty-card { background: linear-gradient(135deg, #fdf6e3 0%, #e8d0a9 100%); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; }
+    .beauty-card h3 { color: #1a4d32; margin-bottom: 15px; }
+    .btn { display: block; padding: 10px 0; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; margin: 6px 0; color: #fff; transition: opacity 0.2s; }
+    .btn-blue { background-color: #2c3e50; }
+    .btn-purple { background-color: #7b4397; }
+    .btn-gold { background-color: var(--accent-gold); color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
     
-    .btn-link { 
-      display: block; font-size: 12px; margin-top: 6px; padding: 8px; 
-      border-radius: 6px; text-decoration: none; font-weight: bold; color: #fff;
-    }
-    .bg-blue { background: #2c3e50; }
-    .bg-purple { background: #7b4397; }
-    .bg-gold { background: var(--accent-gold); color: #000; }
-    
-    .family-section { margin-top: 25px; }
-    .family-btn { display: block; background: #222; color: #ccc; padding: 12px; border-radius: 8px; text-decoration: none; margin-bottom: 8px; font-size: 13px; text-align: center; border: 1px solid #444; }
+    .family-section { margin-top: 10px; }
+    .family-title { font-size: 12px; color: var(--accent-gold); margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+    .family-btn { display: block; background: rgba(0,0,0,0.2); color: #fff; padding: 14px; border-radius: 10px; text-decoration: none; margin-bottom: 8px; font-size: 13px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
   </style>
 </head>
 <body>
   <div class="main-wrapper">
-    <div class="img-container">
-      <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 비즈 24" class="title-img">
-      <div class="brand-top">휴브릿지 비즈 24</div>
-      <div class="contact-overlay">상담 문의: 010-6451-9115</div>
-    </div>
+    <div class="brand-header">
+      <div class="brand-title">휴브릿지 비즈 24</div>
+      <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 배너" class="title-img">
       
-    <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">카카오톡 상담 바로가기</a>
+      <div class="contact-banner">
+        상담 문의: 010-6451-9115
+      </div>
+      <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
+        <span>HU</span> 카카오톡 상담 바로가기
+      </a>
+    </div>
 
     <section class="intro-text">
-      휴브릿지는 미용재료, 의료장비 공급, 창업, 생활가전 렌탈 및 자금 지원을 통해 고객님의 성공적인 비즈니스를 돕는 전문 파트너입니다.
+      휴브릿지는 미용재료를 비롯한 다양한 산업 분야의 제품 및 의료용 장비 공급, 생활가전 렌탈 서비스, 그리고 사업 운영에 필요한 자금 지원을 통해 미래를 함께 설계하는 전문 비즈니스 파트너입니다.
     </section>
     
     <div class="card-row">
       <div class="card">
         <h3>기업·가전 렌탈</h3>
-        <a href="https://blog.naver.com/sora2220" class="btn-link bg-blue">장비렌탈 블로그</a>
-        <a href="http://withmoa.co.kr" class="btn-link bg-blue">가전렌탈 바로가기</a>
+        <a href="https://blog.naver.com/sora2220" class="btn btn-blue">장비렌탈 blog</a>
+        <a href="http://withmoa.co.kr" class="btn btn-blue">가전렌탈 바로가기</a>
       </div>
       <div class="card">
         <h3>상품 판매·중개</h3>
-        <a href="http://www.제로스톤.com" class="btn-link bg-purple">상품중개 블로그</a>
-        <a href="https://i.imgur.com/j2xJywP.png" class="btn-link bg-purple">창업 상담 바로가기</a>
+        <a href="http://www.제로스톤.com" class="btn btn-purple">상품중개 blog</a>
+        <a href="https://i.imgur.com/j2xJywP.png" class="btn btn-purple">창업 상담</a>
       </div>
     </div>
     
-    <div class="card" style="margin-bottom: 20px;">
-      <h3>미용재료 전문</h3>
-      <a href="https://blog.naver.com/dlaeogh3" class="btn-link bg-gold">미용재료 블로그 바로가기</a>
+    <div class="beauty-card">
+      <h3>미용재료</h3>
+      <a href="https://blog.naver.com/dlaeogh3" class="btn btn-gold">미용재료 blog 바로가기</a>
     </div>
     
     <div class="family-section">
-      <div style="font-size:12px; color:var(--accent-gold); margin-bottom:10px; text-align:center;">FAMILY SITE</div>
-      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터</a>
-      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경</a>
+      <div class="family-title">FAMILY SITE</div>
+      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터 blog</a>
+      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경 blog</a>
     </div>
   </div>
 </body>
