@@ -18,18 +18,20 @@
     .brand-header { text-align: center; margin-bottom: 10px; }
     .title-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     
-    /* 전화 연결 링크 스타일 - 텍스트 색상 및 밑줄 설정 */
-    .contact-link { 
+    /* 전화 연결 강제 적용 스타일 */
+    .phone-link { 
       display: block;
-      background: var(--accent-gold); 
-      color: #fff; 
-      padding: 12px; 
+      width: 100%;
+      background-color: var(--accent-gold); 
+      color: #ffffff; 
+      padding: 15px 0; 
+      margin: 10px 0;
       border-radius: 8px; 
-      margin: 10px 0; 
       font-weight: bold; 
       font-size: 16px; 
       text-align: center; 
-      text-decoration: none; /* 밑줄 제거 */
+      text-decoration: none;
+      cursor: pointer;
     }
     
     .kakao-btn { display: flex; align-items: center; justify-content: center; background-color: #fee500; color: #3c1e1e; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; margin-bottom: 15px; font-size: 15px; gap: 10px; }
@@ -58,7 +60,7 @@
     <div class="brand-header">
       <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 배너" class="title-img">
       
-      <a href="tel:01064519115" class="contact-link">
+      <a href="tel:01064519115" class="phone-link">
         상담 문의: 010-6451-9115
       </a>
 
