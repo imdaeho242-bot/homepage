@@ -53,21 +53,36 @@
     .family-title { font-size: 12px; color: var(--accent-gold); margin-bottom: 8px; font-weight: bold; }
     .family-btn { display: block; background: rgba(0,0,0,0.2); color: #fff; padding: 10px; border-radius: 10px; text-decoration: none; margin-bottom: 6px; font-size: 13px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
   </style>
+ /* PC와 모바일 디자인 제어 */
+    .button-group {
+        display: flex;
+        flex-direction: column; /* 기본(모바일)은 세로 정렬 */
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    @media (min-width: 769px) {
+        .button-group {
+            flex-direction: row; /* PC에서는 가로 정렬 */
+            justify-content: center;
+            gap: 20px;
+        }
+    } 
 </head>
 <body>
   <div class="main-wrapper">
     <div class="brand-header">
       <img src="https://github.com/imdaeho242-bot/imdaeho242-bot.github.io/blob/main/%ED%83%80%EC%9D%B4%ED%8B%80.png?raw=true" alt="휴브릿지 배너" class="title-img">
       
-      <a href="tel:01064519115" class="phone-link">
-        상담 문의: 010-6451-9115
-      </a>
-     
-      <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
-        <span>HU</span> 카카오톡 상담 바로가기
-      </a>
+    <d<div class="button-group">
+        <a href="tel:01064519115" class="phone-link">
+            상담 문의: 010-6451-9115
+        </a>
+        <a href="https://pf.kakao.com/_xgEgnX" class="kakao-btn">
+            <span>HJ</span><span> 카카오톡 상담 바로가기 </span>
+        </a>
     </div>
-     
+       
     <section class="intro-text">
       휴브릿지는 미용재료를 비롯한 다양한 산업 분야의 제품 및 의료용 장비 공급, 생활가전 렌탈 서비스, 그리고 사업 운영에 필요한 자금 지원을 통해 미래를 함께 설계하는 전문 비즈니스 파트너입니다.
     </section>
