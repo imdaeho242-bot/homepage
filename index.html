@@ -6,9 +6,9 @@
   <title>휴브릿지 비즈 24</title>
   <style>
     :root { 
-      --bg-deep: #0f172a;       /* 전체 배경: 깊은 네이비 */
-      --accent-gold: #c5a059;   /* 골드 포인트 */
-      --text-main: #f8fafc;     /* 기본 텍스트 */
+      --bg-deep: #0f172a; 
+      --accent-gold: #c5a059; 
+      --text-main: #f8fafc;
     }
     
     body { 
@@ -31,7 +31,6 @@
     .phone-link { background-color: var(--accent-gold); color: #fff; }
     .kakao-btn { background-color: #fee500; color: #333; }
     
-    /* 휴브릿지 설명: 골드 그라데이션 적용 */
     .intro-text { 
         font-size: 1.5rem; line-height: 1.6; margin-bottom: 50px; 
         padding: 40px; 
@@ -43,10 +42,7 @@
     .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
     @media (max-width: 768px) { .card-row { grid-template-columns: 1fr; } }
     
-    /* 서비스 카드: 깔끔한 화이트 카드 */
     .card { background: #ffffff; border-radius: 20px; padding: 40px; text-align: center; color: #1e293b; }
-    
-    /* 미용재료: 따뜻한 골드 톤 배경 */
     .beauty-card { 
         background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); 
         padding: 40px; border-radius: 20px; text-align: center; color: #854d0e; margin-bottom: 25px; 
@@ -57,14 +53,15 @@
     .btn-purple { background-color: #7e22ce; }
     .btn-gold { background-color: #854d0e; color: #fff; }
     
-    /* 패밀리 사이트: 포인트 배경 */
+    /* 패밀리 사이트: 가로 배치 및 공간 축소 */
     .family-section { 
         background: #1e293b; 
-        padding: 40px; border-radius: 20px; text-align: center; 
-        border: 1px solid #334155;
+        padding: 25px 20px; border-radius: 20px; text-align: center; 
+        border: 1px solid #334155; margin-top: 20px;
     }
-    .family-title { font-size: 1rem; color: var(--accent-gold); margin-bottom: 20px; letter-spacing: 4px; font-weight: bold; }
-    .family-btn { display: inline-block; background: #0f172a; color: #fff; padding: 15px 25px; border-radius: 10px; text-decoration: none; margin: 8px; border: 1px solid #334155; }
+    .family-title { font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 15px; letter-spacing: 4px; font-weight: bold; }
+    .family-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .family-btn { display: inline-block; background: #0f172a; color: #fff; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-size: 1rem; border: 1px solid #334155; }
   </style>
 </head>
 <body>
@@ -90,8 +87,10 @@
     
     <div class="family-section">
       <div class="family-title">FAMILY SITE</div>
-      <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터 </a>
-      <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경 </a>
+      <div class="family-container">
+        <a href="https://blog.naver.com/haeyoung924" class="family-btn">햇빛 노인 재가 센터 </a>
+        <a href="https://blog.naver.com/tmdgusdk119" class="family-btn">(주)천리환경 </a>
+      </div>
     </div>
   </div>
 </body>
