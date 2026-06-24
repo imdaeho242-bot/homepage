@@ -6,11 +6,9 @@
   <title>휴브릿지 비즈 24</title>
   <style>
     :root { 
-      --bg-deep: #0f172a; /* 전체 배경: 깊은 네이비 톤 */
-      --card-bg: #ffffff; 
-      --accent-gold: #c5a059; 
-      --text-main: #f8fafc;
-      --text-card: #1e293b;
+      --bg-deep: #0f172a;       /* 전체 배경: 깊은 네이비 */
+      --accent-gold: #c5a059;   /* 골드 포인트 */
+      --text-main: #f8fafc;     /* 기본 텍스트 */
     }
     
     body { 
@@ -33,30 +31,40 @@
     .phone-link { background-color: var(--accent-gold); color: #fff; }
     .kakao-btn { background-color: #fee500; color: #333; }
     
-    /* 소개 문구 부분: 배경 컬러를 입혀 강조 */
+    /* 휴브릿지 설명: 골드 그라데이션 적용 */
     .intro-text { 
         font-size: 1.5rem; line-height: 1.6; margin-bottom: 50px; 
-        padding: 40px; background: linear-gradient(135deg, #1e293b, #334155);
-        border: 2px solid var(--accent-gold);
-        border-radius: 24px; text-align: center;
+        padding: 40px; 
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        border-left: 5px solid var(--accent-gold);
+        border-radius: 10px; text-align: center;
     }
     
     .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
     @media (max-width: 768px) { .card-row { grid-template-columns: 1fr; } }
     
-    .card { background: #f1f5f9; border-radius: 20px; padding: 40px; text-align: center; color: var(--text-card); }
+    /* 서비스 카드: 깔끔한 화이트 카드 */
+    .card { background: #ffffff; border-radius: 20px; padding: 40px; text-align: center; color: #1e293b; }
     
-    .beauty-card { background: #fef3c7; padding: 40px; border-radius: 20px; text-align: center; color: #78350f; margin-bottom: 25px; }
+    /* 미용재료: 따뜻한 골드 톤 배경 */
+    .beauty-card { 
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); 
+        padding: 40px; border-radius: 20px; text-align: center; color: #854d0e; margin-bottom: 25px; 
+    }
     
     .btn { display: block; padding: 18px; border-radius: 10px; text-decoration: none; font-size: 1.15rem; margin-top: 15px; color: #fff; font-weight: 600; }
     .btn-blue { background-color: #334155; }
     .btn-purple { background-color: #7e22ce; }
-    .btn-gold { background-color: var(--accent-gold); color: #fff; }
+    .btn-gold { background-color: #854d0e; color: #fff; }
     
-    /* 패밀리 사이트 스타일 수정 */
-    .family-section { background: #1e293b; padding: 40px; border-radius: 20px; text-align: center; }
-    .family-title { font-size: 1rem; color: var(--accent-gold); margin-bottom: 20px; letter-spacing: 4px; }
-    .family-btn { display: inline-block; background: #334155; color: #fff; padding: 15px 25px; border-radius: 10px; text-decoration: none; margin: 8px; }
+    /* 패밀리 사이트: 포인트 배경 */
+    .family-section { 
+        background: #1e293b; 
+        padding: 40px; border-radius: 20px; text-align: center; 
+        border: 1px solid #334155;
+    }
+    .family-title { font-size: 1rem; color: var(--accent-gold); margin-bottom: 20px; letter-spacing: 4px; font-weight: bold; }
+    .family-btn { display: inline-block; background: #0f172a; color: #fff; padding: 15px 25px; border-radius: 10px; text-decoration: none; margin: 8px; border: 1px solid #334155; }
   </style>
 </head>
 <body>
